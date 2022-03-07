@@ -198,7 +198,8 @@ export const ProductModel = styled.div`
   display: ${(props: ProductModelProps) => (props.show ? "black" : "none")};
   position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 100vh;
   z-index: 1000;
   background: rgba(39, 38, 36, 0.8);
@@ -367,5 +368,11 @@ export const ModelButton = styled.div`
 
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
+  margin-top: auto;
+  margin-bottom: 32px;
+  :hover {
+  }
+
+  :active {
+  }
 `;
