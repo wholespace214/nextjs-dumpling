@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { BlogPageContainer } from "./styled";
 
 const BlogPage: FC = () => {
-  return <BlogPageContainer>Blog Page</BlogPageContainer>;
+  return <BlogPageContainer></BlogPageContainer>;
 };
 
 export default BlogPage;

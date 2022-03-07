@@ -19,7 +19,7 @@ export const SafetyisText = styled.div`
 `;
 
 export const SafetyisTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 92px;
@@ -44,7 +44,7 @@ export const SafetyisButton = styled.div`
   border: 1px solid #272624;
   box-sizing: border-box;
   background: #fbfbfb;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -88,7 +88,7 @@ export const AboutText = styled.div`
 
 export const AboutTitle = styled.div`
   text-transform: uppercase;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 100;
   font-size: 40px;
@@ -147,7 +147,7 @@ export const OfferContainer = styled.div`
 `;
 
 export const OfferTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 92px;
@@ -194,7 +194,7 @@ export const WorkHeader = styled.div`
 
 export const WorkHeaderTitle = styled.div`
   text-transform: uppercase;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -247,7 +247,7 @@ export const WorkButton = styled.div`
   border: 1px solid #272624;
   box-sizing: border-box;
   background: #fbfbfb;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -278,7 +278,7 @@ export const BlogContainer = styled.div`
 `;
 
 export const BlogTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;

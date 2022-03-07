@@ -7,7 +7,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuBlock = styled.div`
-  padding: 141px 483px 0px 392px;
+  padding: 80px 483px 0px 392px;
   display: flex;
   flex-direction: column;
   gap: 48px;

@@ -1,4 +1,4 @@
-import React, { FC, memo, useState } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import {
   StyledContainer,

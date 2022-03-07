@@ -10,10 +10,19 @@ const GlobalStyle = createGlobalStyle`
   src: url(/assets/fonts/product-sans/Product-Sans-Regular.ttf);
 } */
 
+
+@font-face {
+  font-family: 'Heavitas [RUS by Daymarius]';
+  src: url(/font/Heavitas.ttf);
+}
+
 body {
   padding: 0;
   margin: auto;
   max-width: 1440px;
+}
+input[type="checkbox"] {
+  background-color: initial;
 }
 `;
 

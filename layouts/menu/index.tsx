@@ -29,7 +29,7 @@ const MenuLayout: FC<MenuProps> = ({ handleClick }) => {
             HOME
           </MenuItem>
         </Link>
-        <Link href={"/"}>
+        <Link href={"/about"}>
           <MenuItem
             onClick={() => {
               handleClick(false);
@@ -38,7 +38,7 @@ const MenuLayout: FC<MenuProps> = ({ handleClick }) => {
             ABOUT US
           </MenuItem>
         </Link>
-        <Link href={"/"}>
+        <Link href={"/products"}>
           <MenuItem
             onClick={() => {
               handleClick(false);
