@@ -1,4 +1,4 @@
-import React, { FC, memo } from "react";
+import React, { FC, memo, useState } from "react";
 import Image from "next/image";
 import {
   StyledContainer,
@@ -8,6 +8,9 @@ import {
   LanDiv,
   LanText,
   DownIcon,
+
+  //  Menu
+  MenuContainer,
 } from "./styled";
 
 import menu from "../../assets/icons/menu.png";
@@ -15,10 +18,18 @@ import logo from "../../assets/icons/logo.png";
 import search from "../../assets/icons/search.png";
 import down from "../../assets/icons/down.png";
 
-const Header: FC = () => {
+interface HeaderProps {
+  handleClick: Function;
+}
+
+const Header: FC<HeaderProps> = ({ handleClick }) => {
   return (
     <StyledContainer>
-      <Menu>
+      <Menu
+        onClick={() => {
+          handleClick(true);
+        }}
+      >
         <Image src={menu} width={39.75} height={14} />
       </Menu>
       <Logo>

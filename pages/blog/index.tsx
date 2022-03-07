@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import Home from "../containers/Home";
+import Blog from "../../containers/Blog";
 
-import Layout from "../layouts";
+import Layout from "../../layouts";
 
 const Index: FC = () => {
   return (
     <Layout>
-      <Home></Home>
+      <Blog />
     </Layout>
   );
 };

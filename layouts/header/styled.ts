@@ -13,6 +13,7 @@ export const Menu = styled.div`
 
 export const Logo = styled.div`
   cursor: pointer;
+  margin-left: 90px;
 `;
 
 export const Tool = styled.div`
@@ -44,4 +45,10 @@ export const DownIcon = styled.div`
   margin-top: 3px;
   width: 16px;
   height: 9.38px;
+`;
+
+export const MenuContainer = styled.div`
+  background-color: #272624;
+  height: 100vh;
+  overflow: "overlay";
 `;

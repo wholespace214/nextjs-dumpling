@@ -32,5 +32,5 @@ export const BlogCardContent = styled.div`
   font-weight: 700;
   font-size: 21px;
   line-height: 24px;
-  max-width: 343px;
+  /* max-width: 343px; */
 `;
