@@ -3,7 +3,14 @@ import styled from "styled-components";
 export const MenuContainer = styled.div`
   background-color: #272624;
   height: 100vh;
-  /* padding: 211px 483px 147px 310px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 600px) {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+  }
 `;
 
 export const MenuBlock = styled.div`

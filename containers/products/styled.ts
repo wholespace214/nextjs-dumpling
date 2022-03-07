@@ -98,8 +98,12 @@ export const FilterTitleIcon = styled.div`
   cursor: pointer;
 `;
 
+interface FilterContentProps {
+  show?: Boolean;
+}
+
 export const FilterContent = styled.div`
-  display: flex;
+  display: ${(props: FilterContentProps) => (props.show ? "flex" : "none")};
   flex-direction: column;
   gap: 16px;
 `;
@@ -179,17 +183,189 @@ export const PageItem = styled.div<PageItemProps>`
   font-size: 14px;
   line-height: 24px;
   color: #000000;
+  cursor: pointer;
 `;
 
 export const PageItemIcon = styled.div`
   transform: rotate(90deg);
 `;
 
+interface ProductModelProps {
+  show: Boolean;
+}
+
 export const ProductModel = styled.div`
-  position: absolute;
-  /* top: -100px; */
-  /* left: -100px; */
+  display: ${(props: ProductModelProps) => (props.show ? "black" : "none")};
+  position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1000;
   background: rgba(39, 38, 36, 0.8);
+`;
+
+export const ModelContent = styled.div`
+  height: 100vh;
+  width: 377px;
+  background-color: white;
+  float: right;
+`;
+
+export const CloseButton = styled.div`
+  margin-top: 20px;
+  margin-left: 328px;
+  cursor: pointer;
+`;
+
+export const ModelTitle = styled.div`
+  margin-left: 32px;
+  margin-top: 26px;
+
+  font-family: "Heavitas";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #29282d;
+`;
+
+export const ModelCode = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 32px;
+  margin-top: 8px;
+`;
+
+export const ModelCodeText = styled.div`
+  display: flex;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+`;
+
+export const ModelCodeNum = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  margin-left: 8px;
+  display: flex;
+`;
+
+export const ModelLine = styled.hr`
+  width: 312px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+`;
+
+export const ModelText = styled.div`
+  margin-left: 32px;
+  margin-right: 33px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+`;
+
+export const ModelPrice = styled.div`
+  font-family: Heavitas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #29282d;
+  text-align: right;
+
+  margin-right: 32px;
+  margin-top: 16px;
+`;
+
+export const ModelItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 32px;
+  margin-right: 33px;
+  margin-top: 15px;
+`;
+
+export const ModelItemName = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #000000;
+  opacity: 0.3;
+`;
+
+export const ModelItemValue = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+`;
+
+export const ModelHelp = styled.div`
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  margin-left: 32px;
+  margin-right: 32px;
+  /* margin-top: 120px; */
+  margin-top: 30px;
+`;
+
+export const ModelHelpIcon = styled.div`
+  margin-top: 16px;
+  margin-left: 16px;
+`;
+
+export const ModelHelpText = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0.3;
+
+  margin-top: 9px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+`;
+
+export const ModelButton = styled.div`
+  border: 1px solid #272624;
+  box-sizing: border-box;
+  padding: 16px;
+
+  font-family: Heavitas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #272624;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 32px;
 `;

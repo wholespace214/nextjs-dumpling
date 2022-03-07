@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 
 import Image from "next/image";
 
@@ -31,6 +31,22 @@ import {
 
   //  Model;
   ProductModel,
+  ModelContent,
+  CloseButton,
+  ModelCode,
+  ModelCodeNum,
+  ModelCodeText,
+  ModelTitle,
+  ModelLine,
+  ModelText,
+  ModelPrice,
+  ModelItem,
+  ModelItemName,
+  ModelItemValue,
+  ModelHelp,
+  ModelHelpIcon,
+  ModelHelpText,
+  ModelButton,
 } from "./styled";
 
 import ProductCard from "../../components/ProductCard";
@@ -40,6 +56,8 @@ import ProductCard from "../../components/ProductCard";
 import search from "../../assets/icons/search.png";
 import up from "../../assets/icons/up.png";
 import down from "../../assets/icons/down.png";
+import close from "../../assets/icons/close_black.png";
+import info from "../../assets/icons/info.png";
 
 //  Import Images
 import gun1 from "../../assets/images/gun_1.png";
@@ -62,7 +80,7 @@ interface FilterList {
 
 const Product: FC = () => {
   const [pageNum, setPageNum] = useState<Array<Number>>([1, 2, 3, 4, 5]);
-  const [showModel, setShowModel] = useState<boolean>(false);
+  const [showModel, setShowModel] = useState<Boolean>(false);
   const [productData, setProductData] = useState<Array<ProductDataJson>>([
     { img: gun1, name: "Razor HD Gen 3", price: 300 },
     { img: gun2, name: "Razor HD Gen 3", price: 300 },
@@ -84,9 +102,43 @@ const Product: FC = () => {
     { name: "Assault rifles", num: 8 },
   ]);
 
+  const [redDots, setRedDots] = useState<Array<FilterList>>([
+    { name: "Rifles and shotguns", num: 15 },
+    { name: "Carbines", num: 15 },
+    { name: "Machine guns", num: 23 },
+    { name: "Sniper rifles", num: 45 },
+    { name: "Submachine guns", num: 56 },
+    { name: "Automatic rifles", num: 12 },
+    { name: "Assault rifles", num: 8 },
+  ]);
+
+  const [accessories, setAccessories] = useState<Array<FilterList>>([
+    { name: "Rifles and shotguns", num: 15 },
+    { name: "Carbines", num: 15 },
+    { name: "Machine guns", num: 23 },
+    { name: "Sniper rifles", num: 45 },
+    { name: "Submachine guns", num: 56 },
+    { name: "Automatic rifles", num: 12 },
+    { name: "Assault rifles", num: 8 },
+  ]);
+
+  const [firearmsShow, setFirearmsShow] = useState<Boolean>(true);
+  const [redDotsShow, setRedDotsShow] = useState<Boolean>(false);
+  const [accessoriesShow, setAccessoriesShow] = useState<Boolean>(false);
+
+  const [activePageNum, setActivePageNum] = useState<Number>(1);
+
   const handleShowModel = () => {
     setShowModel(!showModel);
   };
+
+  useEffect(() => {
+    if (showModel) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [showModel]);
 
   return (
     <ProductContainer>
@@ -108,11 +160,11 @@ const Product: FC = () => {
           <FilterList>
             <FilterTitle>
               <FilterTitleText>Firearms</FilterTitleText>
-              <FilterTitleIcon>
-                <Image src={up}></Image>
+              <FilterTitleIcon onClick={() => setFirearmsShow(!firearmsShow)}>
+                <Image src={firearmsShow ? up : down} />
               </FilterTitleIcon>
             </FilterTitle>
-            <FilterContent>
+            <FilterContent show={firearmsShow}>
               {firearms.map((item) => (
                 <FilterItem>
                   <FilterItemCheck>
@@ -129,19 +181,45 @@ const Product: FC = () => {
           <FilterList>
             <FilterTitle>
               <FilterTitleText>Red Dots</FilterTitleText>
-              <FilterTitleIcon>
-                <Image src={down}></Image>
+              <FilterTitleIcon onClick={() => setRedDotsShow(!redDotsShow)}>
+                <Image src={redDotsShow ? up : down} />
               </FilterTitleIcon>
             </FilterTitle>
+            <FilterContent show={redDotsShow}>
+              {redDots.map((item) => (
+                <FilterItem>
+                  <FilterItemCheck>
+                    <FilterItmeCheckInput></FilterItmeCheckInput>
+                    <FilterItemCheckText>{item.name}</FilterItemCheckText>
+                  </FilterItemCheck>
+
+                  <FilterItemNum>{item.num}</FilterItemNum>
+                </FilterItem>
+              ))}
+            </FilterContent>
           </FilterList>
           <FilterHr></FilterHr>
           <FilterList>
             <FilterTitle>
               <FilterTitleText>Accessories</FilterTitleText>
-              <FilterTitleIcon>
-                <Image src={down}></Image>
+              <FilterTitleIcon
+                onClick={() => setAccessoriesShow(!accessoriesShow)}
+              >
+                <Image src={accessoriesShow ? up : down} />
               </FilterTitleIcon>
             </FilterTitle>
+            <FilterContent show={accessoriesShow}>
+              {accessories.map((item) => (
+                <FilterItem>
+                  <FilterItemCheck>
+                    <FilterItmeCheckInput></FilterItmeCheckInput>
+                    <FilterItemCheckText>{item.name}</FilterItemCheckText>
+                  </FilterItemCheck>
+
+                  <FilterItemNum>{item.num}</FilterItemNum>
+                </FilterItem>
+              ))}
+            </FilterContent>
           </FilterList>
           <FilterHr></FilterHr>
         </ProductContentFilter>
@@ -163,10 +241,21 @@ const Product: FC = () => {
               </PageItemIcon>
             </PageItem>
             {pageNum.map((item) => {
-              if (item === 1) {
-                return <PageItem active={true}>{item}</PageItem>;
+              if (item === activePageNum) {
+                return (
+                  <PageItem
+                    onClick={() => setActivePageNum(item)}
+                    active={true}
+                  >
+                    {item}
+                  </PageItem>
+                );
               } else {
-                return <PageItem>{item}</PageItem>;
+                return (
+                  <PageItem onClick={() => setActivePageNum(item)}>
+                    {item}
+                  </PageItem>
+                );
               }
             })}
             <PageItem>
@@ -177,7 +266,64 @@ const Product: FC = () => {
           </ProductContentPage>
         </ProductContentList>
       </ProductContent>
-      {/* <ProductModel></ProductModel> */}
+      <ProductModel show={showModel}>
+        <ModelContent>
+          <CloseButton onClick={() => setShowModel(false)}>
+            <Image src={close}></Image>
+          </CloseButton>
+          <ModelTitle>Winchester SX4</ModelTitle>
+          <ModelCode>
+            <ModelCodeText>Code</ModelCodeText>
+            <ModelCodeNum>511213292</ModelCodeNum>
+          </ModelCode>
+          <ModelLine />
+          <ModelText>
+            Lorem ipsum dolor sit amet,consectetur dipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit
+          </ModelText>
+          <ModelPrice>$ 2400</ModelPrice>
+          <ModelLine />
+          <ModelItem>
+            <ModelItemName>Dimensions</ModelItemName>
+            <ModelItemValue>35х25x50сm</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Action</ModelItemName>
+            <ModelItemValue>Semi-Automatic</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Barrel Lenght</ModelItemName>
+            <ModelItemValue>28</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Hand</ModelItemName>
+            <ModelItemValue>Right</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Description</ModelItemName>
+            <ModelItemValue>3.5 Chamber</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Round Capacity</ModelItemName>
+            <ModelItemValue>4+1</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Gun Weight</ModelItemName>
+            <ModelItemValue>7.125 lbs</ModelItemValue>
+          </ModelItem>
+          <ModelHelp>
+            <ModelHelpIcon>
+              <Image src={info} />
+            </ModelHelpIcon>
+            <ModelHelpText>
+              We do not sell firearms online. On the site we can only get
+              acquainted with the availability and put it on reserve
+            </ModelHelpText>
+          </ModelHelp>
+          <ModelButton>reserve</ModelButton>
+        </ModelContent>
+      </ProductModel>
     </ProductContainer>
   );
 };

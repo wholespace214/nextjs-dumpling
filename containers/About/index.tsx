@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import Image from "next/image";
 
@@ -15,6 +15,22 @@ import {
   HeaderBottomImage,
   HeaderBottomImageOne,
   HeaderBottomImageTwo,
+  Middle,
+  MiddleBackground,
+  MiddleContent,
+  MiddleText,
+  MiddleCardGroup,
+  MiddleTextContent,
+  MiddleTextTitle,
+  MiddleCard,
+  Footer,
+  FooterImage,
+  FooterText,
+  FooterTextTitle,
+  FooterTextContent,
+  FooterImageOne,
+  FooterImageTwo,
+  FooterImageThree,
 } from "./styled";
 
 //  Image Import
@@ -24,7 +40,32 @@ import about3 from "../../assets/images/about_3.png";
 import about4 from "../../assets/images/about_4.png";
 import about5 from "../../assets/images/about_5.png";
 
+import philosophy from "../../assets/images/philosophy.png";
+import philosophy2 from "../../assets/images/philosophy_2.png";
+
+import OfferCard from "../../components/OfferCard";
+
 const About: FC = () => {
+  interface OfferData {
+    icon: String;
+    background: string;
+    title: String;
+  }
+
+  const [offerData, setOfferData] = useState<Array<OfferData>>([
+    { icon: "hard", title: "Legalization of firearms", background: "#F3F3F3" },
+    {
+      icon: "hard",
+      title: "The safety of our families",
+      background: "#D1D1D1",
+    },
+    {
+      icon: "hard",
+      title: "The safety of our families",
+      background: "#D1D1D1",
+    },
+  ]);
+
   return (
     <AboutContainer>
       <Header>
@@ -50,11 +91,65 @@ const About: FC = () => {
             it’s ready, you’re ready.
           </HeaderBottomText>
           <HeaderBottomImage>
-            <HeaderBottomImageOne></HeaderBottomImageOne>
-            <HeaderBottomImageTwo></HeaderBottomImageTwo>
+            <HeaderBottomImageOne>
+              <Image src={about4} />
+            </HeaderBottomImageOne>
+            <HeaderBottomImageTwo>
+              <Image src={about3} />
+            </HeaderBottomImageTwo>
           </HeaderBottomImage>
         </HeaderBottom>
       </Header>
+
+      {/*Middle */}
+      <Middle>
+        <MiddleBackground>
+          <MiddleContent>
+            <MiddleText>
+              <MiddleTextTitle>Our mission</MiddleTextTitle>
+              <MiddleTextContent>
+                Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet,consectetur adipiscing elit
+              </MiddleTextContent>
+            </MiddleText>
+            <MiddleCardGroup>
+              {offerData.map((item) => (
+                <MiddleCard>
+                  <OfferCard
+                    background={item.background}
+                    icon={item.icon}
+                    title={item.title}
+                  >
+                    Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </OfferCard>
+                </MiddleCard>
+              ))}
+            </MiddleCardGroup>
+          </MiddleContent>
+        </MiddleBackground>
+      </Middle>
+      <Footer>
+        <FooterText>
+          <FooterTextTitle>Family protection comes first</FooterTextTitle>
+          <FooterTextContent>
+            Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </FooterTextContent>
+        </FooterText>
+        <FooterImage>
+          <FooterImageOne>
+            <Image src={about5} />
+          </FooterImageOne>
+          <FooterImageTwo></FooterImageTwo>
+          <Image src={philosophy} />
+          <FooterImageThree>
+            <Image src={philosophy2} />
+          </FooterImageThree>
+        </FooterImage>
+      </Footer>
     </AboutContainer>
   );
 };

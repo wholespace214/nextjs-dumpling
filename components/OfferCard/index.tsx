@@ -15,8 +15,8 @@ import file from "../../assets/icons/file.png";
 
 interface OfferCardProps {
   background: string;
-  icon: string;
-  title: string;
+  icon: String;
+  title: String;
   children: string;
 }
 
