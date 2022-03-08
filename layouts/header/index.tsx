@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Image from "next/image";
 import {
   StyledContainer,
@@ -8,6 +8,10 @@ import {
   LanDiv,
   LanText,
   DownIcon,
+  LanSelect,
+  LanOptionDiv,
+  LanOption,
+  SearchImag,
 
   //  Menu
   MenuContainer,
@@ -23,6 +27,15 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ handleClick }) => {
+  const [showOption, setShowOption] = useState<boolean>(false);
+  const [optionList, setOptionList] = useState<Array<string>>([
+    "ENG",
+    "FRA",
+    "DEU",
+    "UKR",
+  ]);
+  const [selectOption, setSelectOption] = useState<string>("ENG");
+
   return (
     <StyledContainer>
       <Menu
@@ -36,12 +49,27 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
         <Image src={logo} width={134.17} height={30.59} />
       </Logo>
       <Tool>
-        <Image src={search} width={20} height={20} />
+        <SearchImag>
+          <Image src={search} width={20} height={20} />
+        </SearchImag>
         <LanDiv>
-          <LanText>ENG</LanText>
-          <DownIcon>
-            <Image src={down} />
-          </DownIcon>
+          <LanSelect>
+            <LanText>{selectOption}</LanText>
+            <DownIcon onClick={() => setShowOption(!showOption)}>
+              <Image src={down} />
+            </DownIcon>
+          </LanSelect>
+          <LanOptionDiv show={showOption}>
+            {optionList.map((item) => {
+              if (item != selectOption) {
+                return (
+                  <LanOption onClick={() => setSelectOption(item)}>
+                    {item}
+                  </LanOption>
+                );
+              }
+            })}
+          </LanOptionDiv>
         </LanDiv>
       </Tool>
     </StyledContainer>
