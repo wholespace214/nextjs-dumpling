@@ -47,6 +47,16 @@ import {
   ModelHelpIcon,
   ModelHelpText,
   ModelButton,
+  MessageContent,
+
+  //
+  MobileFilter,
+  MobileFilterText,
+  MobileFilterIcon,
+  MoblieFilterContent,
+  Content,
+  ContentTitle,
+  ContentClose,
 } from "./styled";
 
 import ProductCard from "../../components/ProductCard";
@@ -58,6 +68,7 @@ import up from "../../assets/icons/up.png";
 import down from "../../assets/icons/down.png";
 import close from "../../assets/icons/close_black.png";
 import info from "../../assets/icons/info.png";
+import filter from "../../assets/icons/filter.png";
 
 //  Import Images
 import gun1 from "../../assets/images/gun_1.png";
@@ -81,6 +92,8 @@ interface FilterList {
 const Product: FC = () => {
   const [pageNum, setPageNum] = useState<Array<Number>>([1, 2, 3, 4, 5]);
   const [showModel, setShowModel] = useState<Boolean>(false);
+  const [showMessage, setMessage] = useState<boolean>(false);
+
   const [productData, setProductData] = useState<Array<ProductDataJson>>([
     { img: gun1, name: "Razor HD Gen 3", price: 300 },
     { img: gun2, name: "Razor HD Gen 3", price: 300 },
@@ -128,35 +141,221 @@ const Product: FC = () => {
 
   const [activePageNum, setActivePageNum] = useState<Number>(1);
 
+  const [mobilFilterShow, setMobilFilterShow] = useState<boolean>(false);
+
   const handleShowModel = () => {
     setShowModel(!showModel);
   };
 
   useEffect(() => {
-    if (showModel) {
+    if (showModel || mobilFilterShow) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }, [showModel]);
+  }, [showModel, mobilFilterShow]);
 
   return (
-    <ProductContainer>
-      <ProductTitle>ALL PRODUCTS</ProductTitle>
-      <ProductFilter>
-        <ProductFilterSearch>
-          <Image src={search} width={13} height={13}></Image>
-          <ProductFilterSerchText>Search</ProductFilterSerchText>
-        </ProductFilterSearch>
-        <ProductFilterSort>
-          <option value="0">Sort by</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </ProductFilterSort>
-      </ProductFilter>
-      <ProductLine></ProductLine>
-      <ProductContent>
-        <ProductContentFilter>
+    <>
+      <ProductContainer show={!mobilFilterShow}>
+        <ProductTitle>ALL PRODUCTS</ProductTitle>
+        <ProductFilter>
+          <MobileFilter>
+            <MobileFilterIcon onClick={() => setMobilFilterShow(true)}>
+              <Image src={filter} />
+            </MobileFilterIcon>
+            <MobileFilterText>Filter</MobileFilterText>
+          </MobileFilter>
+          <ProductFilterSearch>
+            <Image src={search} width={13} height={13}></Image>
+            <ProductFilterSerchText>Search</ProductFilterSerchText>
+          </ProductFilterSearch>
+          <ProductFilterSort>
+            <option value="0">Sort by</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </ProductFilterSort>
+        </ProductFilter>
+        <ProductLine />
+        <ProductContent>
+          <ProductContentFilter>
+            <FilterList>
+              <FilterTitle>
+                <FilterTitleText>Firearms</FilterTitleText>
+                <FilterTitleIcon onClick={() => setFirearmsShow(!firearmsShow)}>
+                  <Image src={firearmsShow ? up : down} />
+                </FilterTitleIcon>
+              </FilterTitle>
+              <FilterContent show={firearmsShow}>
+                {firearms.map((item) => (
+                  <FilterItem>
+                    <FilterItemCheck>
+                      <FilterItmeCheckInput></FilterItmeCheckInput>
+                      <FilterItemCheckText>{item.name}</FilterItemCheckText>
+                    </FilterItemCheck>
+
+                    <FilterItemNum>{item.num}</FilterItemNum>
+                  </FilterItem>
+                ))}
+              </FilterContent>
+            </FilterList>
+            <FilterHr></FilterHr>
+            <FilterList>
+              <FilterTitle>
+                <FilterTitleText>Red Dots</FilterTitleText>
+                <FilterTitleIcon onClick={() => setRedDotsShow(!redDotsShow)}>
+                  <Image src={redDotsShow ? up : down} />
+                </FilterTitleIcon>
+              </FilterTitle>
+              <FilterContent show={redDotsShow}>
+                {redDots.map((item) => (
+                  <FilterItem>
+                    <FilterItemCheck>
+                      <FilterItmeCheckInput></FilterItmeCheckInput>
+                      <FilterItemCheckText>{item.name}</FilterItemCheckText>
+                    </FilterItemCheck>
+
+                    <FilterItemNum>{item.num}</FilterItemNum>
+                  </FilterItem>
+                ))}
+              </FilterContent>
+            </FilterList>
+            <FilterHr></FilterHr>
+            <FilterList>
+              <FilterTitle>
+                <FilterTitleText>Accessories</FilterTitleText>
+                <FilterTitleIcon
+                  onClick={() => setAccessoriesShow(!accessoriesShow)}
+                >
+                  <Image src={accessoriesShow ? up : down} />
+                </FilterTitleIcon>
+              </FilterTitle>
+              <FilterContent show={accessoriesShow}>
+                {accessories.map((item) => (
+                  <FilterItem>
+                    <FilterItemCheck>
+                      <FilterItmeCheckInput></FilterItmeCheckInput>
+                      <FilterItemCheckText>{item.name}</FilterItemCheckText>
+                    </FilterItemCheck>
+
+                    <FilterItemNum>{item.num}</FilterItemNum>
+                  </FilterItem>
+                ))}
+              </FilterContent>
+            </FilterList>
+            <FilterHr></FilterHr>
+          </ProductContentFilter>
+          <ProductContentList>
+            <ProductCardGroup>
+              {productData.map((item) => (
+                <ProductCard
+                  img={item.img}
+                  price={item.price}
+                  name={item.name}
+                  handleShowModel={handleShowModel}
+                />
+              ))}
+            </ProductCardGroup>
+            <ProductContentPage>
+              <PageItem>
+                <PageItemIcon>
+                  <Image src={down}></Image>
+                </PageItemIcon>
+              </PageItem>
+              {pageNum.map((item) => {
+                if (item === activePageNum) {
+                  return (
+                    <PageItem
+                      onClick={() => setActivePageNum(item)}
+                      active={true}
+                    >
+                      {item}
+                    </PageItem>
+                  );
+                } else {
+                  return (
+                    <PageItem onClick={() => setActivePageNum(item)}>
+                      {item}
+                    </PageItem>
+                  );
+                }
+              })}
+              <PageItem>
+                <PageItemIcon>
+                  <Image src={up}></Image>
+                </PageItemIcon>
+              </PageItem>
+            </ProductContentPage>
+          </ProductContentList>
+        </ProductContent>
+      </ProductContainer>
+
+      <ProductModel show={showModel}>
+        <ModelContent show={!showMessage}>
+          <CloseButton onClick={() => setShowModel(false)}>
+            <Image src={close}></Image>
+          </CloseButton>
+          <ModelTitle>Winchester SX4</ModelTitle>
+          <ModelCode>
+            <ModelCodeText>Code</ModelCodeText>
+            <ModelCodeNum>511213292</ModelCodeNum>
+          </ModelCode>
+          <ModelLine />
+          <ModelText>
+            Lorem ipsum dolor sit amet,consectetur dipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit
+          </ModelText>
+          <ModelPrice>$ 2400</ModelPrice>
+          <ModelLine />
+          <ModelItem>
+            <ModelItemName>Dimensions</ModelItemName>
+            <ModelItemValue>35х25x50сm</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Action</ModelItemName>
+            <ModelItemValue>Semi-Automatic</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Barrel Lenght</ModelItemName>
+            <ModelItemValue>28</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Hand</ModelItemName>
+            <ModelItemValue>Right</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Description</ModelItemName>
+            <ModelItemValue>3.5 Chamber</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Round Capacity</ModelItemName>
+            <ModelItemValue>4+1</ModelItemValue>
+          </ModelItem>
+          <ModelItem>
+            <ModelItemName>Gun Weight</ModelItemName>
+            <ModelItemValue>7.125 lbs</ModelItemValue>
+          </ModelItem>
+          <ModelHelp>
+            <ModelHelpIcon>
+              <Image src={info} />
+            </ModelHelpIcon>
+            <ModelHelpText>
+              We do not sell firearms online. On the site we can only get
+              acquainted with the availability and put it on reserve
+            </ModelHelpText>
+          </ModelHelp>
+          <ModelButton>reserve</ModelButton>
+        </ModelContent>
+        <MessageContent show={showMessage}></MessageContent>
+      </ProductModel>
+
+      <MoblieFilterContent show={mobilFilterShow}>
+        <Content>
+          <ContentClose onClick={() => setMobilFilterShow(false)}>
+            <Image src={close} />
+          </ContentClose>
+          <ContentTitle>Filter</ContentTitle>
           <FilterList>
             <FilterTitle>
               <FilterTitleText>Firearms</FilterTitleText>
@@ -222,109 +421,9 @@ const Product: FC = () => {
             </FilterContent>
           </FilterList>
           <FilterHr></FilterHr>
-        </ProductContentFilter>
-        <ProductContentList>
-          <ProductCardGroup>
-            {productData.map((item) => (
-              <ProductCard
-                img={item.img}
-                price={item.price}
-                name={item.name}
-                handleShowModel={handleShowModel}
-              />
-            ))}
-          </ProductCardGroup>
-          <ProductContentPage>
-            <PageItem>
-              <PageItemIcon>
-                <Image src={down}></Image>
-              </PageItemIcon>
-            </PageItem>
-            {pageNum.map((item) => {
-              if (item === activePageNum) {
-                return (
-                  <PageItem
-                    onClick={() => setActivePageNum(item)}
-                    active={true}
-                  >
-                    {item}
-                  </PageItem>
-                );
-              } else {
-                return (
-                  <PageItem onClick={() => setActivePageNum(item)}>
-                    {item}
-                  </PageItem>
-                );
-              }
-            })}
-            <PageItem>
-              <PageItemIcon>
-                <Image src={up}></Image>
-              </PageItemIcon>
-            </PageItem>
-          </ProductContentPage>
-        </ProductContentList>
-      </ProductContent>
-      <ProductModel show={showModel}>
-        <ModelContent>
-          <CloseButton onClick={() => setShowModel(false)}>
-            <Image src={close}></Image>
-          </CloseButton>
-          <ModelTitle>Winchester SX4</ModelTitle>
-          <ModelCode>
-            <ModelCodeText>Code</ModelCodeText>
-            <ModelCodeNum>511213292</ModelCodeNum>
-          </ModelCode>
-          <ModelLine />
-          <ModelText>
-            Lorem ipsum dolor sit amet,consectetur dipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit
-          </ModelText>
-          <ModelPrice>$ 2400</ModelPrice>
-          <ModelLine />
-          <ModelItem>
-            <ModelItemName>Dimensions</ModelItemName>
-            <ModelItemValue>35х25x50сm</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Action</ModelItemName>
-            <ModelItemValue>Semi-Automatic</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Barrel Lenght</ModelItemName>
-            <ModelItemValue>28</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Hand</ModelItemName>
-            <ModelItemValue>Right</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Description</ModelItemName>
-            <ModelItemValue>3.5 Chamber</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Round Capacity</ModelItemName>
-            <ModelItemValue>4+1</ModelItemValue>
-          </ModelItem>
-          <ModelItem>
-            <ModelItemName>Gun Weight</ModelItemName>
-            <ModelItemValue>7.125 lbs</ModelItemValue>
-          </ModelItem>
-          <ModelHelp>
-            <ModelHelpIcon>
-              <Image src={info} />
-            </ModelHelpIcon>
-            <ModelHelpText>
-              We do not sell firearms online. On the site we can only get
-              acquainted with the availability and put it on reserve
-            </ModelHelpText>
-          </ModelHelp>
-          <ModelButton>reserve</ModelButton>
-        </ModelContent>
-      </ProductModel>
-    </ProductContainer>
+        </Content>
+      </MoblieFilterContent>
+    </>
   );
 };
 

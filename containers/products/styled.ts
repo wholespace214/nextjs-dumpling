@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
+interface ProductContainerProps {
+  show: boolean;
+}
+
 export const ProductContainer = styled.div`
-  display: flex;
+  display: ${(props: ProductContainerProps) => (props.show ? "flex" : "none")};
   flex-direction: column;
   position: relative;
 `;
@@ -15,6 +19,13 @@ export const ProductTitle = styled.div`
   font-size: 64px;
   line-height: 70px;
   color: #272624;
+  letter-spacing: 0.01em;
+  @media screen and (max-width: 600px) {
+    font-size: 40px;
+    line-height: 50px;
+    margin-left: 24px;
+    /* display: none; */
+  }
 `;
 
 export const ProductFilter = styled.div`
@@ -32,6 +43,40 @@ export const ProductFilter = styled.div`
   font-size: 14px;
   line-height: 24px;
   color: #000000;
+  @media screen and (max-width: 600px) {
+    margin-right: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const MobileFilter = styled.div`
+  display: none;
+  flex-direction: row;
+  gap: 8px;
+  margin-right: 20px;
+  @media screen and (max-width: 600px) {
+    display: flex;
+  }
+`;
+
+export const MobileFilterText = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+`;
+
+export const MobileFilterIcon = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
 `;
 
 export const ProductFilterSearch = styled.div``;
@@ -53,6 +98,10 @@ export const ProductFilterSort = styled.select`
 export const ProductLine = styled.hr`
   width: 99%;
   margin-top: 24px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const ProductContent = styled.div`
@@ -66,6 +115,9 @@ export const ProductContent = styled.div`
 export const ProductContentFilter = styled.div`
   flex: 1;
   margin-left: 32px;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const FilterList = styled.div`
@@ -83,6 +135,7 @@ export const FilterTitle = styled.div`
 export const FilterHr = styled.hr`
   margin-top: 24px;
   margin-bottom: 24px;
+  width: 100%;
 `;
 
 export const FilterTitleText = styled.div`
@@ -144,12 +197,18 @@ export const ProductContentList = styled.div`
   /* border: 1px solid black; */
 
   flex: 3;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const ProductCardGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 26px;
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const ProductContentPage = styled.div`
@@ -205,8 +264,14 @@ export const ProductModel = styled.div`
   background: rgba(39, 38, 36, 0.8);
 `;
 
+interface ModelContentProps {
+  show: boolean;
+}
+
 export const ModelContent = styled.div`
+  display: ${(props: ModelContentProps) => (props.show ? "block" : "none")};
   height: 100vh;
+  overflow-y: scroll;
   width: 377px;
   background-color: white;
   float: right;
@@ -368,11 +433,66 @@ export const ModelButton = styled.div`
 
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: auto;
+  margin-top: 50px;
   margin-bottom: 32px;
   :hover {
   }
 
   :active {
   }
+`;
+
+interface MobileFilterContentProps {
+  show: boolean;
+}
+
+export const MoblieFilterContent = styled.div`
+  display: ${(props: MobileFilterContentProps) =>
+    props.show ? "black" : "none"};
+  position: fixed;
+  z-index: 10000;
+  background: white;
+  top: 0;
+  /* height: 100vh; */
+  width: 100%;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100vh;
+  /* width: 100%; */
+  padding: 0 24px 20px 24px;
+  /* margin-left: 24px; */
+`;
+
+export const ContentTitle = styled.div`
+  margin-top: 27px;
+  margin-bottom: 40px;
+
+  font-family: Heavitas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+
+  color: #272624;
+`;
+
+export const ContentClose = styled.div`
+  margin-top: 63px;
+  margin-left: 312px;
+`;
+
+interface MessageContentProps {
+  show: boolean;
+}
+
+export const MessageContent = styled.div`
+  display: ${(props: MessageContentProps) => (props.show ? "black" : "none")};
+  width: 100px;
+  height: 100px;
+  background: white;
 `;
