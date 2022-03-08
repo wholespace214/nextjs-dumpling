@@ -4,16 +4,29 @@ export const StyledContainer = styled.header`
   margin: 0;
   padding: 44px 32px 44px 32px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 600px) {
+    padding: 61px 24px 0px 24px;
+    flex-direction: row-reverse;
+  }
 `;
 
 export const Menu = styled.div`
   cursor: pointer;
+  @media screen and (max-width: 600px) {
+    /* display: flex; */
+  }
 `;
 
 export const Logo = styled.div`
   cursor: pointer;
   margin-left: 90px;
+  @media screen and (max-width: 600px) {
+    /* display: none; */
+    margin-left: 0;
+    /* margin-top: -5px; */
+  }
 `;
 
 export const Tool = styled.div`
@@ -25,6 +38,9 @@ export const LanDiv = styled.div`
   /* display: flex; */
   /* flex-direction: column; */
   position: relative;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const SearchImag = styled.div`
@@ -59,8 +75,7 @@ export const LanOption = styled.div`
   font-size: 21px;
   line-height: 24px;
   color: #272624;
-  /* padding-left: 24px; */
-  /* padding-right: 32px; */
+
   padding: 12px 32px 12px 24px;
 
   display: flex;

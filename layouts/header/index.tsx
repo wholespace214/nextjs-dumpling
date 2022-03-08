@@ -63,7 +63,12 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
             {optionList.map((item) => {
               if (item != selectOption) {
                 return (
-                  <LanOption onClick={() => setSelectOption(item)}>
+                  <LanOption
+                    onClick={() => {
+                      setSelectOption(item);
+                      setShowOption(!showOption);
+                    }}
+                  >
                     {item}
                   </LanOption>
                 );

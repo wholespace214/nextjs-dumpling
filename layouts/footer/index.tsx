@@ -6,6 +6,7 @@ import {
   FooterContainer,
   FooterLogo,
   FooterList,
+  FooterListTwo,
   FooterTool,
   FooterItem,
   FooterListGroup,
@@ -15,6 +16,9 @@ import {
   FooterToolText,
   FooterLink,
   FooterVisa,
+  FooterMiddle,
+  MiddleList,
+  MiddelItem,
 } from "./styled";
 
 import logo from "../../assets/images/footer_logo.png";
@@ -61,7 +65,7 @@ const Footer: FC = () => {
           </Link>
         </FooterList>
 
-        <FooterList>
+        <FooterListTwo>
           <Link href={"/faq"}>
             <FooterItem>
               FAQ <FooterItemHr />
@@ -88,7 +92,7 @@ const Footer: FC = () => {
               Refund Policy <FooterItemHr />
             </FooterItem>
           </Link>
-        </FooterList>
+        </FooterListTwo>
       </FooterListGroup>
       <FooterTool>
         <FooterToolTop>
@@ -102,6 +106,27 @@ const Footer: FC = () => {
             <Image src={youtube} />
           </FooterLink>
         </FooterToolTop>
+        <FooterMiddle>
+          <MiddleList>
+            <Link href={"/faq"}>
+              <MiddelItem>FAQ</MiddelItem>
+            </Link>
+            <Link href={"/terms"}>
+              <MiddelItem>Terms & Conditions</MiddelItem>
+            </Link>
+            <Link href={"/"}>
+              <MiddelItem>Privacy Policy</MiddelItem>
+            </Link>
+          </MiddleList>
+          <MiddleList>
+            <Link href={"/"}>
+              <MiddelItem>Shipping Policy</MiddelItem>
+            </Link>
+            <Link href={"/"}>
+              <MiddelItem>Refund Policy</MiddelItem>
+            </Link>
+          </MiddleList>
+        </FooterMiddle>
         <FooterToolBottom>
           <FooterVisa>
             <Image src={visa} />
