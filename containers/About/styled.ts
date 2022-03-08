@@ -77,6 +77,7 @@ export const HeaderBottomImageTwo = styled.div`
 
 export const Middle = styled.div`
   margin-bottom: 90px;
+  position: relative;
 `;
 
 export const MiddleBackground = styled.div`
@@ -114,6 +115,14 @@ export const MiddleTextContent = styled.div`
   line-height: 40px;
   color: #ffffff;
   max-width: 346px;
+`;
+
+export const MiddleCardHeader = styled.div`
+  width: 340px;
+  height: 350px;
+  position: absolute;
+  top: 405px;
+  left: 1050px;
 `;
 
 export const MiddleCardGroup = styled.div`

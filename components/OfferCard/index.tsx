@@ -17,14 +17,14 @@ interface OfferCardProps {
   background: string;
   icon: String;
   title: String;
-  children: string;
+  content: string;
 }
 
 const OfferCard: FC<OfferCardProps> = ({
   background,
   icon,
   title,
-  children,
+  content,
 }) => {
   return (
     <OfferCardDiv color={background}>
@@ -35,12 +35,14 @@ const OfferCard: FC<OfferCardProps> = ({
           <Image src={time} />
         ) : icon === "setting" ? (
           <Image src={setting} />
-        ) : (
+        ) : icon === "file" ? (
           <Image src={file} />
+        ) : (
+          ""
         )}
       </OfferCardIcon>
       <OfferCardTitle color={background}>{title}</OfferCardTitle>
-      <OfferCardText color={background}>{children}</OfferCardText>
+      <OfferCardText color={background}>{content}</OfferCardText>
     </OfferCardDiv>
   );
 };

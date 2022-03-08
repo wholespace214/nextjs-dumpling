@@ -31,6 +31,7 @@ import {
   FooterImageOne,
   FooterImageTwo,
   FooterImageThree,
+  MiddleCardHeader,
 } from "./styled";
 
 //  Image Import
@@ -50,19 +51,31 @@ const About: FC = () => {
     icon: String;
     background: string;
     title: String;
+    content: string;
   }
 
   const [offerData, setOfferData] = useState<Array<OfferData>>([
-    { icon: "hard", title: "Legalization of firearms", background: "#F3F3F3" },
+    { icon: "", title: "", background: "", content: "" },
     {
       icon: "hard",
-      title: "The safety of our families",
-      background: "#D1D1D1",
+      title: "The Safety of Our Families",
+      background: "#F3F3F3",
+      content:
+        "There's enough gatekeeping and confusion in the firearm industry. We believe increased knowledge of firearms is the most effective way to keep loved ones safe.",
     },
     {
       icon: "hard",
-      title: "The safety of our families",
+      title: "Prioritizing Community",
+      background: "#F3F3F3",
+      content:
+        "There's enough gatekeeping and confusion in the firearm industry. We believe increased knowledge of firearms is the most effective way to keep loved ones safe.",
+    },
+    {
+      icon: "hard",
+      title: "Responsible Gun Ownership",
       background: "#D1D1D1",
+      content:
+        "There's enough gatekeeping and confusion in the firearm industry. We believe increased knowledge of firearms is the most effective way to keep loved ones safe.",
     },
   ]);
 
@@ -114,22 +127,33 @@ const About: FC = () => {
               </MiddleTextContent>
             </MiddleText>
             <MiddleCardGroup>
-              {offerData.map((item) => (
-                <MiddleCard>
-                  <OfferCard
-                    background={item.background}
-                    icon={item.icon}
-                    title={item.title}
-                  >
-                    Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </OfferCard>
-                </MiddleCard>
-              ))}
+              {offerData.map((item, index) => {
+                if (index !== 5) {
+                  return (
+                    <MiddleCard>
+                      <OfferCard
+                        background={item.background}
+                        icon={item.icon}
+                        title={item.title}
+                        content={item.content}
+                      />
+                    </MiddleCard>
+                  );
+                }
+              })}
             </MiddleCardGroup>
           </MiddleContent>
         </MiddleBackground>
+        <MiddleCardHeader>
+          <OfferCard
+            background={"#D1D1D1"}
+            icon={"hard"}
+            title={"Securing Documentation"}
+            content={
+              "Purchasing a gun in California is a long and convoluted process. Our software delivers the exact forms you need to legally and safely buy a gun in the Bay Area."
+            }
+          />
+        </MiddleCardHeader>
       </Middle>
       <Footer>
         <FooterText>

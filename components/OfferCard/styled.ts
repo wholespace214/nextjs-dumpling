@@ -5,9 +5,10 @@ type OfferCardProps = {
 };
 
 export const OfferCardDiv = styled.div`
-  padding: 40px;
+  padding: 35px;
   background-color: ${(props: OfferCardProps) => props.color};
-  height: 256px;
+  height: 280px;
+  /* padding-bottom: 30px; */
 `;
 
 export const OfferCardIcon = styled.div``;
