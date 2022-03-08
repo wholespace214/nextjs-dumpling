@@ -4,14 +4,20 @@ import {
   NewsTextWhite,
   NewsTextBlack,
   NewsButton,
+  EmailGroup,
 } from "./styled";
+
+import Input from "../../components/Input";
 
 const News: FC = () => {
   return (
     <NewsContainer>
       <NewsTextWhite>stay up to date with all news</NewsTextWhite>
       <NewsTextBlack>in the firearms industry</NewsTextBlack>
-      <NewsButton>Read more</NewsButton>
+      <EmailGroup>
+        <Input label={"Email"} />
+      </EmailGroup>
+      <NewsButton>subscribe</NewsButton>
     </NewsContainer>
   );
 };

@@ -25,6 +25,7 @@ export const NewsTextBlack = styled.div`
 `;
 
 export const NewsButton = styled.div`
+  float: right;
   border: 1px solid #272624;
   box-sizing: border-box;
   background-color: #e9342e;
@@ -48,4 +49,8 @@ export const NewsButton = styled.div`
     background: #fbfbfb;
     color: black;
   }
+`;
+
+export const EmailGroup = styled.div`
+  margin-top: 24px;
 `;
