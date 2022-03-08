@@ -145,25 +145,34 @@ const Home: FC = () => {
             </OfferCardDiv>
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
-              <OfferCard background="#D1D1D1" icon="hard" title="Comfort">
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </OfferCard>
+              <OfferCard
+                background="#D1D1D1"
+                icon="hard"
+                title="Comfort"
+                content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              ></OfferCard>
             </OfferCardDiv>
           </OfferCardGroupRow>
           <OfferCardGroupRow>
             <OfferCardDiv>
-              <OfferCard background="#272624" icon="file" title="Documents">
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </OfferCard>
+              <OfferCard
+                background="#272624"
+                icon="file"
+                title="Documents"
+                content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              ></OfferCard>
             </OfferCardDiv>
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
-              <OfferCard background="#F3F3F3" icon="time" title="Support">
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </OfferCard>
+              <OfferCard
+                background="#F3F3F3"
+                icon="time"
+                title="Support"
+                content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              ></OfferCard>
             </OfferCardDiv>
             <OfferCardDiv></OfferCardDiv>
           </OfferCardGroupRow>
@@ -174,20 +183,18 @@ const Home: FC = () => {
                 background="#F3F3F3"
                 icon="time"
                 title="Processing speed"
-              >
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </OfferCard>
+                content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              ></OfferCard>
             </OfferCardDiv>
             <OfferCardDiv>
               <OfferCard
                 background="#D1D1D1"
                 icon="setting"
                 title="Further service"
-              >
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </OfferCard>
+                content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              ></OfferCard>
             </OfferCardDiv>
             <OfferCardDiv></OfferCardDiv>
           </OfferCardGroupRow>
@@ -202,10 +209,9 @@ const Home: FC = () => {
             background="#D1D1D1"
             icon="setting"
             title="Further service"
-          >
-            Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </OfferCard>
+            content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          ></OfferCard>
         </OfferMobileCardGroup>
       </OfferContainer>
       <WorkContainer>
