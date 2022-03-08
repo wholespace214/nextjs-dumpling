@@ -20,6 +20,7 @@ body {
   padding: 0;
   margin: auto;
   max-width: 1440px;
+  /* background: #E5E5E5; */
 }
 input[type="checkbox"] {
   background-color: initial;

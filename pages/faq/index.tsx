@@ -1,13 +1,12 @@
 import React, { FC } from "react";
-// import Blog from "../../containers/Blog";
+import Faq from "../../containers/Faq";
 
 import Layout from "../../layouts";
 
 const Index: FC = () => {
   return (
     <Layout>
-      {/* <Blog /> */}
-      <div>FAG</div>
+      <Faq />
     </Layout>
   );
 };

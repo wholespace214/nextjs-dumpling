@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import {
   FooterContainer,
   FooterLogo,
@@ -32,39 +34,60 @@ const Footer: FC = () => {
       </FooterLogo>
       <FooterListGroup>
         <FooterList>
-          <FooterItem>
-            Home <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            About us <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Our work <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Blog <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Contacts <FooterItemHr />
-          </FooterItem>
+          <Link href={"/"}>
+            <FooterItem>
+              Home <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/about"}>
+            <FooterItem>
+              About use <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/"}>
+            <FooterItem>
+              Our work <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/blog"}>
+            <FooterItem>
+              Blog <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/"}>
+            <FooterItem>
+              Contacts <FooterItemHr />
+            </FooterItem>
+          </Link>
         </FooterList>
 
         <FooterList>
-          <FooterItem>
-            FAQ <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Terms & Conditions <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Privacy Policy <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Shipping Policy <FooterItemHr />
-          </FooterItem>
-          <FooterItem>
-            Refund Policy <FooterItemHr />
-          </FooterItem>
+          <Link href={"/faq"}>
+            <FooterItem>
+              FAQ <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/terms"}>
+            <FooterItem>
+              Terms & Conditions <FooterItemHr />
+            </FooterItem>
+          </Link>
+
+          <Link href={"/"}>
+            <FooterItem>
+              Privacy Policy <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/"}>
+            <FooterItem>
+              Shipping Policy <FooterItemHr />
+            </FooterItem>
+          </Link>
+          <Link href={"/"}>
+            <FooterItem>
+              Refund Policy <FooterItemHr />
+            </FooterItem>
+          </Link>
         </FooterList>
       </FooterListGroup>
       <FooterTool>

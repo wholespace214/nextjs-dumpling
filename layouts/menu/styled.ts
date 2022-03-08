@@ -10,11 +10,13 @@ export const MenuContainer = styled.div`
     background-color: red;
     height: 100vh;
     width: 100vw;
+    display: block;
+    /* flex-direction: column; */
   }
 `;
 
 export const MenuBlock = styled.div`
-  padding: 80px 483px 0px 392px;
+  padding: 140px 483px 0px 392px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -26,7 +28,7 @@ export const MenuItem = styled.div`
   font-weight: 400;
   font-size: 64px;
   line-height: 70px;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
 `;
 
