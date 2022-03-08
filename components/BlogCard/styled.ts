@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const BlogCardContainer = styled.div``;
+export const BlogCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const BlogCardTitle = styled.div`
   display: flex;
@@ -11,6 +14,11 @@ export const BlogCardTitle = styled.div`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+`;
+
+export const BlogCardImage = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 export const BlogCardType = styled.div``;
@@ -26,11 +34,13 @@ export const BlogCardDateLine = styled.div`
 `;
 
 export const BlogCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 24px;
-  /* max-width: 343px; */
+  max-width: 343px;
 `;

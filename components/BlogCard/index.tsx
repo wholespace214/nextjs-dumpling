@@ -8,6 +8,7 @@ import {
   BlogCardTitle,
   BlogCardType,
   BlogCardDateLine,
+  BlogCardImage,
 } from "./styled";
 
 interface BlogCardProps {
@@ -20,7 +21,9 @@ interface BlogCardProps {
 const BlogCard: FC<BlogCardProps> = ({ type, date, img, content }) => {
   return (
     <BlogCardContainer>
-      <Image src={img} />
+      <BlogCardImage>
+        <Image src={img} />
+      </BlogCardImage>
       <BlogCardTitle>
         <BlogCardType>{type}</BlogCardType>
         <BlogCardDateLine></BlogCardDateLine>

@@ -23,7 +23,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       ) : (
         <>
           <Header handleClick={handleMenu} />
-          {/* {children} */}
+          {children}
           <News />
           <Footer />
         </>

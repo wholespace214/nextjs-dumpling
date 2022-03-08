@@ -10,6 +10,7 @@ import {
   SafetyisLogo,
   SafetyisDiv,
   SafetyisButton,
+  SafetyisMobileButton,
   //  About
   AboutContainer,
   AboutText,
@@ -29,6 +30,8 @@ import {
   OfferCardGroupRow,
   OfferCardDiv,
   OfferCardDivText,
+  OfferMobileText,
+  OfferMobileCardGroup,
   //  Work
   WorkContainer,
   WorkHeader,
@@ -63,19 +66,24 @@ import blog1 from "../../assets/images/blog_1.png";
 import blog2 from "../../assets/images/blog_2.png";
 import blog3 from "../../assets/images/blog_3.png";
 
+import Button from "../../components/Button";
+
 const Home: FC = () => {
   return (
     <div>
       <SafetyisContainer>
         <SafetyisRectangle />
         <SafetyisText>
-          <SafetyisTitle>SAFETYIS IN YOUR HANDS</SafetyisTitle>
+          <SafetyisTitle>Smart, Safe, & Strapped</SafetyisTitle>
           <SafetyisContent>
-            Let’s face it. With paper forms, multiple trips to the dealer, and
-            confusing rules on who, what, where and when to buy a gun, you need
-            a guide.
+            Make friends with your firearm and bypass the rollercoaster ride of
+            paper forms and infinite trips to the dealer. We offer a streamlined
+            firearms purchase process starting with our flagship store serving
+            the Bay Area.
           </SafetyisContent>
-          <SafetyisButton>READ MORE</SafetyisButton>
+          <SafetyisButton>
+            <Button>READ MORE</Button>
+          </SafetyisButton>
         </SafetyisText>
         <SafetyisDiv>
           <Image src={safetyis} height={512} />
@@ -83,42 +91,42 @@ const Home: FC = () => {
             <Image src={logo} />
           </SafetyisLogo>
         </SafetyisDiv>
+        <SafetyisMobileButton>
+          <Button>READ MORE</Button>
+        </SafetyisMobileButton>
       </SafetyisContainer>
       <AboutContainer>
         <AboutText>
           <AboutTitle>About us</AboutTitle>
           <AboutContent>
-            Let’s face it. With paper forms, multiple trips to the dealer, and
-            confusing rules on who, what, where and when to buy a gun, you need
-            a guide. We provide a data-driven platform that keeps you up to date
-            on the forms you need and the release status of your firearm. When
-            it’s ready, you’re ready.
+            We’re here to make gun ownership easy and accessible to those
+            preparing to purchase a gun in the Bay Area. Reserve a firearm
+            online, avoid the frustration of paper forms, and receive all
+            required documentation from our software in one straight-shot.
           </AboutContent>
         </AboutText>
         <AboutFeature>
           <FeatureCard>
             <FeatureCardImage>
               <Image src={feature1} />
-              <FeatureCardFooter>
-                <FeatureCardText>
-                  Software to firearms industry's
-                </FeatureCardText>
-                <FeatureCardBack>
-                  <Image src={right} />
-                </FeatureCardBack>
-              </FeatureCardFooter>
             </FeatureCardImage>
+            <FeatureCardFooter>
+              <FeatureCardText>Software to firearms industry's</FeatureCardText>
+              <FeatureCardBack>
+                <Image src={right} />
+              </FeatureCardBack>
+            </FeatureCardFooter>
           </FeatureCard>
           <FeatureCard>
             <FeatureCardImage>
               <Image src={feature2} />
-              <FeatureCardFooter>
-                <FeatureCardText>Concept retail store</FeatureCardText>
-                <FeatureCardBack>
-                  <Image src={right} />
-                </FeatureCardBack>
-              </FeatureCardFooter>
             </FeatureCardImage>
+            <FeatureCardFooter>
+              <FeatureCardText>Concept retail store</FeatureCardText>
+              <FeatureCardBack>
+                <Image src={right} />
+              </FeatureCardBack>
+            </FeatureCardFooter>
           </FeatureCard>
         </AboutFeature>
       </AboutContainer>
@@ -129,9 +137,10 @@ const Home: FC = () => {
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
               <OfferCardDivText>
-                Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet,consectetur adipiscing elit
+                Dumpling Defense is a data-driven platform and firearms retailer
+                committed to keeping gun owners up-to-date with the latest
+                forms, processes, and knowledge needed to own and use a firearm
+                responsibly.
               </OfferCardDivText>
             </OfferCardDiv>
             <OfferCardDiv></OfferCardDiv>
@@ -183,6 +192,21 @@ const Home: FC = () => {
             <OfferCardDiv></OfferCardDiv>
           </OfferCardGroupRow>
         </OfferCardGroup>
+        <OfferMobileText>
+          Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
+          sit amet,consectetur adipiscing elit
+        </OfferMobileText>
+        <OfferMobileCardGroup>
+          <OfferCard
+            background="#D1D1D1"
+            icon="setting"
+            title="Further service"
+          >
+            Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </OfferCard>
+        </OfferMobileCardGroup>
       </OfferContainer>
       <WorkContainer>
         <WorkHeader>
@@ -205,7 +229,9 @@ const Home: FC = () => {
             <Image src={work} />
           </WorkOnlineImage>
         </WorkOnline>
-        <WorkButton>READ MORE</WorkButton>
+        <WorkButton>
+          <Button>READ MORE</Button>
+        </WorkButton>
       </WorkContainer>
 
       <BlogContainer>
@@ -231,7 +257,9 @@ const Home: FC = () => {
             content="Lorem ipsum dolor sit amet, consectetur"
             img={blog3}
           ></BlogCard>
-          <BlogButton>view all</BlogButton>
+          <BlogButton>
+            <Button>view all</Button>
+          </BlogButton>
         </BlogGroupTwo>
       </BlogContainer>
     </div>
