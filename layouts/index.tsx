@@ -5,11 +5,15 @@ import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 import Menu from "../layouts/menu";
 
+import { useRouter } from "next/router";
+
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
+  const { pathname } = useRouter();
+
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const handleMenu = (flag: boolean) => {
@@ -24,7 +28,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <>
           <Header handleClick={handleMenu} />
           {children}
-          <News />
+          {pathname === "/contact" ? "" : <News />}
           <Footer />
         </>
       )}

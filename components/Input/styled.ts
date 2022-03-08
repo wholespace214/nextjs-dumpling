@@ -16,16 +16,17 @@ const Label = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(255, 255, 255, 0.3);
+  /* color: rgba(255, 255, 255, 0.3); */
+  color: rgba(0, 0, 0, 0.3);
 `;
 
 const Input = styled.input`
   /* height: 65px; */
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(41, 40, 45, 0.3);
   border-top: none;
   border-left: none;
   border-right: none;
-  background: #272624;
+  /* background: #272624; */
   opacity: 0.5;
   outline: none;
 
@@ -34,7 +35,6 @@ const Input = styled.input`
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
   padding-top: 32px;
   padding-bottom: 8px;
 

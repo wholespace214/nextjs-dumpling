@@ -58,7 +58,7 @@ const Footer: FC = () => {
               Blog <FooterItemHr />
             </FooterItem>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/contact"}>
             <FooterItem>
               Contacts <FooterItemHr />
             </FooterItem>
