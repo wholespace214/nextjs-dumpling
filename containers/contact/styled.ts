@@ -59,7 +59,7 @@ const ContentHeader = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 24px;

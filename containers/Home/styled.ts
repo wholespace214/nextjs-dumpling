@@ -31,7 +31,7 @@ export const SafetyisText = styled.div`
 `;
 
 export const SafetyisTitle = styled.div`
-  font-family: "Heavitas";
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 92px;
@@ -211,7 +211,7 @@ export const OfferTitle = styled.div`
   text-transform: uppercase;
   max-width: 456px;
   @media screen and (max-width: 600px) {
-    font-family: Heavitas;
+    font-family: "Heavitas [RUS by Daymarius]";
     font-size: 56px;
     line-height: 64px;
     margin: 0;

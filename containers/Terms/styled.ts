@@ -13,7 +13,7 @@ const TermsContainer = styled.div`
 // const TermsRight = styled.div``;
 
 const TermsTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -53,7 +53,7 @@ const TextList = styled.div`
 `;
 
 const TextListTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 24px;

@@ -22,7 +22,7 @@ export const HeaderTop = styled.div`
 
 export const Title = styled.div`
   flex: 8;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: 400;
   font-weight: normal;
   font-size: 64px;
@@ -171,7 +171,7 @@ export const MiddleText = styled.div`
 `;
 
 export const MiddleTextTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 92px;
@@ -252,7 +252,7 @@ export const Footer = styled.div`
 
 export const FooterMobileTitle = styled.div`
   display: none;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;

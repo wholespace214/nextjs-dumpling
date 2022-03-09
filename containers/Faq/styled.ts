@@ -12,7 +12,7 @@ export const FaqContainer = styled.div`
 export const FaqTitle = styled.div`
   max-width: 634px;
 
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 64px;

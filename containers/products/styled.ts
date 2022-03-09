@@ -290,7 +290,7 @@ export const ModelTitle = styled.div`
   margin-left: 32px;
   margin-top: 26px;
 
-  font-family: "Heavitas";
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -346,7 +346,7 @@ export const ModelText = styled.div`
 `;
 
 export const ModelPrice = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -420,7 +420,7 @@ export const ModelButton = styled.div`
   box-sizing: border-box;
   padding: 16px;
 
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -474,7 +474,7 @@ export const ContentTitle = styled.div`
   margin-top: 27px;
   margin-bottom: 40px;
 
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;

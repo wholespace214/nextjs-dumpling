@@ -20,7 +20,7 @@ export const BlogList = styled.div`
 `;
 
 export const BlogItem = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 100;
   font-size: 24px;
@@ -57,7 +57,7 @@ export const BlogTextReadText = styled.span`
 
 export const BlogTextTitle = styled.div`
   margin-top: 40px;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
@@ -84,7 +84,7 @@ export const BlogTextLink = styled.div`
 
 export const BlogTextLinkText = styled.div`
   text-transform: uppercase;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 100;
   font-size: 13px;
