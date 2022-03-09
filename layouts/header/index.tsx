@@ -60,7 +60,7 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
             </DownIcon>
           </LanSelect>
           <LanOptionDiv show={showOption}>
-            {optionList.map((item) => {
+            {optionList.map((item, index) => {
               if (item != selectOption) {
                 return (
                   <LanOption
@@ -68,6 +68,7 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
                       setSelectOption(item);
                       setShowOption(!showOption);
                     }}
+                    key={index}
                   >
                     {item}
                   </LanOption>

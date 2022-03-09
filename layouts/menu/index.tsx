@@ -47,7 +47,7 @@ const MenuLayout: FC<MenuProps> = ({ handleClick }) => {
             PRODUCTS
           </MenuItem>
         </Link>
-        <Link href={"/"}>
+        <Link href={"/features/software"}>
           <MenuItem
             onClick={() => {
               handleClick(false);
