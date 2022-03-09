@@ -32,19 +32,29 @@ import {
   FooterImageTwo,
   FooterImageThree,
   MiddleCardHeader,
+  HeaderTopImageOneMobile,
+  HeaderBottomImageOneMobile,
+  MiddleCardGroupMobile,
+  FooterMobileTitle,
+  FooterMobileText,
+  FooterBottom,
 } from "./styled";
 
 //  Image Import
 import about1 from "../../assets/images/about_1.png";
+import about1_mobile from "../../assets/images/about_1_mobile.png";
 import about2 from "../../assets/images/about_2.png";
 import about3 from "../../assets/images/about_3.png";
 import about4 from "../../assets/images/about_4.png";
+import about4_mobile from "../../assets/images/about_4_mobile.png";
 import about5 from "../../assets/images/about_5.png";
 
 import philosophy from "../../assets/images/philosophy.png";
 import philosophy2 from "../../assets/images/philosophy_2.png";
 
 import OfferCard from "../../components/OfferCard";
+
+import Button from "../../components/Button";
 
 const About: FC = () => {
   interface OfferData {
@@ -83,10 +93,11 @@ const About: FC = () => {
     <AboutContainer>
       <Header>
         <HeaderTop>
-          <Title>
-            We are a company who facilitates legal possession of firearms
-          </Title>
+          <Title>Simplify Purchasing a Gun in California</Title>
           <HeaderTopImage>
+            <HeaderTopImageOneMobile>
+              <Image src={about1_mobile} />
+            </HeaderTopImageOneMobile>
             <HeaderTopImageOne>
               <Image src={about1} />
             </HeaderTopImageOne>
@@ -107,6 +118,9 @@ const About: FC = () => {
             <HeaderBottomImageOne>
               <Image src={about4} />
             </HeaderBottomImageOne>
+            <HeaderBottomImageOneMobile>
+              <Image src={about4_mobile} />
+            </HeaderBottomImageOneMobile>
             <HeaderBottomImageTwo>
               <Image src={about3} />
             </HeaderBottomImageTwo>
@@ -121,11 +135,23 @@ const About: FC = () => {
             <MiddleText>
               <MiddleTextTitle>Our mission</MiddleTextTitle>
               <MiddleTextContent>
-                Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet,consectetur adipiscing elit
+                We are prioritizes gun ownership and safety training to firearm
+                owners in the Bay Area, heavily focusing on vulnerable
+                communities. Our software simplifies the ownership process while
+                outlining the exact documentation needed to legally purchase a
+                gun.
               </MiddleTextContent>
             </MiddleText>
+            <MiddleCardGroupMobile>
+              <OfferCard
+                background={"#D1D1D1"}
+                icon={"hard"}
+                title={"Securing Documentation"}
+                content={
+                  "Purchasing a gun in California is a long and convoluted process. Our software delivers the exact forms you need to legally and safely buy a gun in the Bay Area."
+                }
+              />
+            </MiddleCardGroupMobile>
             <MiddleCardGroup>
               {offerData.map((item, index) => {
                 if (index !== 5) {
@@ -156,6 +182,8 @@ const About: FC = () => {
         </MiddleCardHeader>
       </Middle>
       <Footer>
+        <FooterMobileTitle>Our philosophy</FooterMobileTitle>
+        <FooterMobileText>01/04</FooterMobileText>
         <FooterText>
           <FooterTextTitle>Family protection comes first</FooterTextTitle>
           <FooterTextContent>
@@ -167,11 +195,15 @@ const About: FC = () => {
           <FooterImageOne>
             <Image src={about5} />
           </FooterImageOne>
-          <FooterImageTwo></FooterImageTwo>
-          <Image src={philosophy} />
+          <FooterImageTwo>
+            <Image src={philosophy} />
+          </FooterImageTwo>
           <FooterImageThree>
             <Image src={philosophy2} />
           </FooterImageThree>
+          <FooterBottom>
+            <Button>Read more</Button>
+          </FooterBottom>
         </FooterImage>
       </Footer>
     </AboutContainer>

@@ -275,6 +275,9 @@ export const ModelContent = styled.div`
   width: 377px;
   background-color: white;
   float: right;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const CloseButton = styled.div`
