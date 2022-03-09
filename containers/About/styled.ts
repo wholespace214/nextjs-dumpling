@@ -217,7 +217,7 @@ export const MiddleCardHeader = styled.div`
   width: 340px;
   height: 350px;
   position: absolute;
-  top: 405px;
+  top: 500px;
   left: 1050px;
   @media screen and (max-width: 600px) {
     display: none;
@@ -257,11 +257,10 @@ export const FooterMobileTitle = styled.div`
   font-weight: normal;
   font-size: 40px;
   line-height: 56px;
-  display: flex;
   align-items: center;
   letter-spacing: 0.01em;
   @media screen and (max-width: 600px) {
-    display: block;
+    display: flex;
   }
 `;
 

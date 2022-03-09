@@ -7,7 +7,7 @@ type OfferCardProps = {
 export const OfferCardDiv = styled.div`
   padding: 35px;
   background-color: ${(props: OfferCardProps) => props.color};
-  height: 280px;
+  height: 265px;
   /* padding-bottom: 30px; */
 `;
 
