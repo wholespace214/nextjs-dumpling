@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Software from "../../containers/Features/Software";
+import Software from "@containers/Features/Software";
 
 import Layout from "../../layouts";
 
