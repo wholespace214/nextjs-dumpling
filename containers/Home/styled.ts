@@ -4,7 +4,7 @@ export const SafetyisContainer = styled.div`
   display: flex;
   margin-left: 32px;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     margin-left: 0px;
@@ -17,7 +17,7 @@ export const SafetyisRectangle = styled.div`
   height: 6px;
   background-color: #e9342e;
   margin-top: 146px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -25,8 +25,9 @@ export const SafetyisRectangle = styled.div`
 export const SafetyisText = styled.div`
   margin-top: 110px;
   max-width: 500px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-top: 40px;
+    max-width: 100%;
   }
 `;
 
@@ -38,7 +39,7 @@ export const SafetyisTitle = styled.div`
   line-height: 100px;
   letter-spacing: 0.01em;
   color: #272624;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 56px;
     line-height: 64px;
   }
@@ -55,13 +56,16 @@ export const SafetyisContent = styled.div`
   color: #020202;
   max-width: 454px;
   margin-top: 16px;
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const SafetyisButton = styled.div`
   float: left;
   width: 229px;
   margin-top: 40px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -69,7 +73,7 @@ export const SafetyisButton = styled.div`
 export const SafetyisMobileButton = styled.div`
   display: none;
   margin-top: 40px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 `;
@@ -77,7 +81,7 @@ export const SafetyisMobileButton = styled.div`
 export const SafetyisDiv = styled.div`
   position: relative;
   margin-top: 72px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-top: 24px;
   }
 `;
@@ -86,7 +90,7 @@ export const SafetyisLogo = styled.div`
   position: absolute;
   top: 392.52px;
   left: 338.42px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 140px;
     height: 140px;
     top: 125px;
@@ -97,7 +101,7 @@ export const SafetyisLogo = styled.div`
 export const AboutContainer = styled.div`
   margin-top: 196px;
   padding: 100px 146px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: 0px 24px;
     margin-top: 120px;
   }
@@ -121,7 +125,7 @@ export const AboutTitle = styled.div`
   align-items: center;
   letter-spacing: 0.01em;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     line-height: 56px;
   }
 `;
@@ -134,7 +138,7 @@ export const AboutContent = styled.div`
   line-height: 40px;
   color: #272624;
   margin-top: 16px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 18px;
     line-height: 32px;
   }
@@ -145,7 +149,7 @@ export const AboutFeature = styled.div`
   display: flex;
   flex-direction: row;
   gap: 30px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -160,7 +164,7 @@ export const FeatureCardImage = styled.div`
   margin-top: 57px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     max-width: 279px;
   }
 `;
@@ -191,7 +195,7 @@ export const FeatureCardBack = styled.div`
 
 export const OfferContainer = styled.div`
   margin-top: 106px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: none; */
     margin-top: 120px;
     padding: 0 24px;
@@ -210,7 +214,7 @@ export const OfferTitle = styled.div`
   margin-left: 378px;
   text-transform: uppercase;
   max-width: 456px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-family: "Heavitas [RUS by Daymarius]";
     font-size: 56px;
     line-height: 64px;
@@ -229,7 +233,7 @@ export const OfferMobileText = styled.div`
   font-size: 18px;
   line-height: 32px;
   color: #272624;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 `;
@@ -237,14 +241,14 @@ export const OfferMobileText = styled.div`
 export const OfferMobileCardGroup = styled.div`
   margin-top: 32px;
   display: none;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 `;
 
 export const OfferCardGroup = styled.div`
   padding: 72px 50px 119px 50px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -270,7 +274,7 @@ export const OfferCardDivText = styled.div`
 
 export const WorkContainer = styled.div`
   padding: 96px 147px 2px 33px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: none; */
     margin-top: 50px;
     padding: 0px 24px;
@@ -299,7 +303,7 @@ export const WorkHeaderText = styled.div`
   font-size: 24px;
   line-height: 40px;
   max-width: 802px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -309,7 +313,7 @@ export const WorkOnline = styled.div`
   flex-direction: row;
   margin-top: 40px;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -328,7 +332,7 @@ export const WorkOnlineTextTitle = styled.div`
   line-height: 24px;
   color: #000000;
   margin-top: 189px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-top: 0;
   }
 `;
@@ -341,7 +345,7 @@ export const WorkOnlineTextContent = styled.div`
   line-height: 24px;
   max-width: 275px;
   margin-top: 16px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     max-width: 100%;
   }
 `;
@@ -350,7 +354,7 @@ export const WorkButton = styled.div`
   margin-top: 40px;
   width: 229px;
   float: right;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     float: none;
     margin-bottom: 50px;
@@ -363,7 +367,7 @@ export const BlogContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: none; */
     padding: 0px 24px;
     margin-bottom: 81px;
@@ -380,7 +384,10 @@ export const BlogTitle = styled.div`
   line-height: 60px;
 `;
 
-export const BlogGroupOne = styled.div``;
+export const BlogGroupOne = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const BlogGroupTwo = styled.div`
   display: flex;
@@ -391,7 +398,7 @@ export const BlogGroupTwo = styled.div`
 export const BlogButton = styled.div`
   width: 229px;
   margin-left: 116px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     margin-left: 0;
     display: none;

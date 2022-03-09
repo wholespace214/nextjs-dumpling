@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   margin-top: 66px;
   padding: 0px 146px 10px 148px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -15,9 +15,9 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterLogo = styled.div`
-  @media screen and (max-width: 600px) {
-    margin-left: 140px;
-    margin-right: 139px;
+  @media screen and (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -30,7 +30,7 @@ export const FooterListGroup = styled.div`
 export const FooterList = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -41,7 +41,7 @@ export const FooterList = styled.div`
 export const FooterListTwo = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -54,7 +54,7 @@ export const FooterItem = styled.div`
 export const FooterItemHr = styled.hr``;
 
 export const FooterTool = styled.div`
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -75,7 +75,7 @@ export const FooterToolBottom = styled.div`
   margin-top: 112px;
   gap: 25px;
   justify-content: center;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-top: 60px;
   }
 `;
@@ -104,7 +104,7 @@ export const FooterToolText = styled.div`
 
 export const FooterMiddle = styled.div`
   display: none;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 16px;

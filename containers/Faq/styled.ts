@@ -4,7 +4,7 @@ export const FaqContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 80px 260px 0px 260px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin: 80px 21px 0px 21px;
   }
 `;
@@ -20,7 +20,7 @@ export const FaqTitle = styled.div`
   letter-spacing: 0.01em;
   color: #272624;
   text-transform: uppercase;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 40px;
     line-height: 50px;
   }

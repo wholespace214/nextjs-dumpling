@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const BlogCardContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const BlogCardTitle = styled.div`

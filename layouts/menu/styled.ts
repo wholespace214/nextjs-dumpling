@@ -7,7 +7,7 @@ export const MenuContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -16,7 +16,7 @@ export const MenuBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: 171px 0px 0px 30px;
   }
 `;
@@ -32,7 +32,7 @@ export const MenuItem = styled.div`
   align-items: center;
   letter-spacing: 0.01em;
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-family: Heavitas;
     font-style: normal;
     font-weight: 400;
@@ -45,7 +45,7 @@ export const MenuClose = styled.div`
   padding-top: 70px;
   padding-left: 70px;
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding-top: 46px;
     padding-left: 38px;
   }

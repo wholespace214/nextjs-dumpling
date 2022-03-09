@@ -3,7 +3,7 @@ import styled from "styled-components";
 const TermsContainer = styled.div`
   padding: 40px 261px 0px 261px;
   position: relative;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: 40px 24px;
   }
 `;
@@ -20,7 +20,7 @@ const TermsTitle = styled.div`
   line-height: 70px;
   letter-spacing: 0.01em;
   color: #000000;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 40px;
     line-height: 50px;
   }
@@ -42,7 +42,7 @@ const TextListGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 20px;
   }
 `;
@@ -82,7 +82,7 @@ const IconGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;

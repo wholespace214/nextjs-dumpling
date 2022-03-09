@@ -20,7 +20,7 @@ export const ProductTitle = styled.div`
   line-height: 70px;
   color: #272624;
   letter-spacing: 0.01em;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     font-size: 40px;
     line-height: 50px;
     margin-left: 24px;
@@ -43,7 +43,7 @@ export const ProductFilter = styled.div`
   font-size: 14px;
   line-height: 24px;
   color: #000000;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-right: 24px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@ export const MobileFilter = styled.div`
   flex-direction: row;
   gap: 8px;
   margin-right: 20px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
   }
 `;
@@ -99,7 +99,7 @@ export const ProductLine = styled.hr`
   width: 99%;
   margin-top: 24px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -115,7 +115,7 @@ export const ProductContent = styled.div`
 export const ProductContentFilter = styled.div`
   flex: 1;
   margin-left: 32px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -197,7 +197,7 @@ export const ProductContentList = styled.div`
   /* border: 1px solid black; */
 
   flex: 3;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 80px;
   }
 `;
@@ -206,7 +206,7 @@ export const ProductCardGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 26px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     justify-content: center;
   }
 `;
@@ -275,7 +275,7 @@ export const ModelContent = styled.div`
   width: 377px;
   background-color: white;
   float: right;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;

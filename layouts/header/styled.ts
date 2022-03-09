@@ -6,7 +6,7 @@ export const StyledContainer = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: 61px 24px 0px 24px;
     flex-direction: row-reverse;
   }
@@ -14,7 +14,7 @@ export const StyledContainer = styled.header`
 
 export const Menu = styled.div`
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: flex; */
   }
 `;
@@ -22,7 +22,7 @@ export const Menu = styled.div`
 export const Logo = styled.div`
   cursor: pointer;
   margin-left: 90px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: none; */
     margin-left: 0;
     /* margin-top: -5px; */
@@ -38,7 +38,7 @@ export const LanDiv = styled.div`
   /* display: flex; */
   /* flex-direction: column; */
   position: relative;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;

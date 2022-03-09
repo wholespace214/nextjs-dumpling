@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ContactContainer = styled.div`
   height: 800px;
   position: relative;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     position: none;
     height: 570px;
     margin-top: 100px;
@@ -18,7 +18,7 @@ const ContactBackground = styled.div`
   width: 100%;
   height: 100vh;
   z-index: -1;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -27,7 +27,7 @@ const ContactImage = styled.div`
   position: absolute;
   top: 60px;
   left: 20px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -42,7 +42,7 @@ const ContactContent = styled.div`
   width: 830px;
   padding: 40px 40px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     position: none;
     right: 0;
     top: 0;
@@ -52,7 +52,7 @@ const ContactContent = styled.div`
 `;
 
 const ContentHeader = styled.div`
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-left: 24px;
     margin-right: 24px;
   }
@@ -67,7 +67,7 @@ const Title = styled.div`
   text-transform: capitalize;
 
   color: #29282d;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 8px;
   }
 `;
@@ -86,7 +86,7 @@ const InputGroup = styled.div`
   flex-direction: row;
   gap: 24px;
   margin-top: 32px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-left: 24px;
     margin-right: 24px;
@@ -108,7 +108,7 @@ const RightGroup = styled.div`
 `;
 
 const RightText = styled.div`
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -122,7 +122,7 @@ const TextTitle = styled.div`
   color: rgba(0, 0, 0, 0.3);
 
   margin-bottom: 42px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -132,7 +132,7 @@ const FooterGroup = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     /* display: none; */
     flex-direction: column;
     margin-left: 24px;
@@ -162,7 +162,7 @@ const CheckText = styled.div`
 
 const FooterBut = styled.div`
   width: 229px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -179,7 +179,7 @@ const Contacts = styled.div`
   flex-direction: column;
   gap: 8px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
