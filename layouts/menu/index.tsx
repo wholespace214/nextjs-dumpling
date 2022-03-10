@@ -3,7 +3,7 @@ import { MenuContainer, MenuBlock, MenuItem, MenuClose } from "./styled";
 import Image from "next/image";
 import Link from "next/link";
 
-import close from "../../assets/icons/close.png";
+import close from "@assets/icons/close.png";
 
 interface MenuProps {
   handleClick: Function;

@@ -17,10 +17,10 @@ import {
   MenuContainer,
 } from "./styled";
 
-import menu from "../../assets/icons/menu.png";
-import logo from "../../assets/icons/logo.png";
-import search from "../../assets/icons/search.png";
-import down from "../../assets/icons/down.png";
+import menu from "@assets/icons/menu.png";
+import logo from "@assets/icons/logo.png";
+import search from "@assets/icons/search.png";
+import down from "@assets/icons/down.png";
 
 interface HeaderProps {
   handleClick: Function;

@@ -22,7 +22,7 @@ export const MenuBlock = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -33,7 +33,7 @@ export const MenuItem = styled.div`
   letter-spacing: 0.01em;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    font-family: Heavitas;
+    font-family: "Heavitas [RUS by Daymarius]";
     font-style: normal;
     font-weight: 400;
     font-size: 40px;

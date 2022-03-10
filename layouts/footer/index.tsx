@@ -21,14 +21,14 @@ import {
   MiddelItem,
 } from "./styled";
 
-import logo from "../../assets/images/footer_logo.png";
+import logo from "@assets/images/footer_logo.png";
 
-import youtube from "../../assets/icons/youtube.png";
-import facebook from "../../assets/icons/facebook.png";
-import instagram from "../../assets/icons/instagram.png";
+import youtube from "@assets/icons/youtube.png";
+import facebook from "@assets/icons/facebook.png";
+import instagram from "@assets/icons/instagram.png";
 
-import visa from "../../assets/icons/visa.png";
-import visa2 from "../../assets/icons/visa_2.png";
+import visa from "@assets/icons/visa.png";
+import visa2 from "@assets/icons/visa_2.png";
 
 const Footer: FC = () => {
   return (

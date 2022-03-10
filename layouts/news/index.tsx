@@ -7,7 +7,7 @@ import {
   EmailGroup,
 } from "./styled";
 
-import Input from "../../components/Input2";
+import Input from "@components/Input2";
 
 const News: FC = () => {
   return (
