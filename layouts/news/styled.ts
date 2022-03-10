@@ -11,7 +11,7 @@ export const NewsContainer = styled.div`
 `;
 
 export const NewsTextWhite = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -22,7 +22,7 @@ export const NewsTextWhite = styled.div`
 `;
 
 export const NewsTextBlack = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -39,7 +39,7 @@ export const NewsButton = styled.div`
   justify-content: center;
   align-items: center;
 
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

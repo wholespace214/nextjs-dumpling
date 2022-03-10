@@ -338,7 +338,7 @@ export const FooterImageTwo = styled.div`
 `;
 
 export const FooterImageThree = styled.div`
-  margin-top: -196px;
+  margin-top: -218px;
   @media screen and (max-width: 768px) {
     display: none;
   }
