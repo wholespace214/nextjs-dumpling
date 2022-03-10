@@ -1,5 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Image from "next/image";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper";
 
 import {
   SafetyisContainer,
@@ -68,7 +77,51 @@ import blog3 from "../../assets/images/blog_3.png";
 
 import Button from "../../components/Button";
 
+interface OfferDataType {
+  background: string;
+  icon: String;
+  title: String;
+  content: string;
+}
+
 const Home: FC = () => {
+  const [offerData, setOfferData] = useState<Array<OfferDataType>>([
+    {
+      background: "#D1D1D1",
+      icon: "hard",
+      title: "Shop online",
+      content:
+        "Shop online, reserve a firearm, setup an appointment to finalize purchase in-store",
+    },
+    {
+      background: "#D1D1D1",
+      icon: "hard",
+      title: "Support",
+      content:
+        "Instant access to our firearm specialists during the online experience to ask any questions about the firearms your interested in",
+    },
+    {
+      background: "#D1D1D1",
+      icon: "hard",
+      title: "Online selection",
+      content:
+        "No sales pressure, browser online and reserve at the customers convenience",
+    },
+    {
+      background: "#D1D1D1",
+      icon: "hard",
+      title: "Trust",
+      content:
+        "Maximum transparency and the elimination all of the guesswork on the customer’s side",
+    },
+    {
+      background: "#D1D1D1",
+      icon: "hard",
+      title: "Error checking",
+      content:
+        "Never worry about filling out and keeping physical records again, the majority of all the paperwork is done digitally (on-site). This allows real-time validations and will catch human error before submission.",
+    },
+  ]);
   return (
     <div>
       <SafetyisContainer>
@@ -146,6 +199,7 @@ const Home: FC = () => {
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
               <OfferCard
+                key={1}
                 background="#D1D1D1"
                 icon="hard"
                 title="Comfort"
@@ -157,8 +211,9 @@ const Home: FC = () => {
           <OfferCardGroupRow>
             <OfferCardDiv>
               <OfferCard
-                background="#272624"
-                icon="file"
+                key={2}
+                background="#F3F3F3"
+                icon="hard"
                 title="Documents"
                 content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -167,6 +222,7 @@ const Home: FC = () => {
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
               <OfferCard
+                key={3}
                 background="#F3F3F3"
                 icon="time"
                 title="Support"
@@ -180,6 +236,7 @@ const Home: FC = () => {
             <OfferCardDiv></OfferCardDiv>
             <OfferCardDiv>
               <OfferCard
+                key={4}
                 background="#F3F3F3"
                 icon="time"
                 title="Processing speed"
@@ -189,6 +246,7 @@ const Home: FC = () => {
             </OfferCardDiv>
             <OfferCardDiv>
               <OfferCard
+                key={5}
                 background="#D1D1D1"
                 icon="setting"
                 title="Further service"
@@ -205,13 +263,23 @@ const Home: FC = () => {
           sit amet,consectetur adipiscing elit
         </OfferMobileText>
         <OfferMobileCardGroup>
-          <OfferCard
-            background="#D1D1D1"
-            icon="setting"
-            title="Further service"
-            content="Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ></OfferCard>
+          <Swiper
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+          >
+            {offerData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <OfferCard
+                  background={item.background}
+                  icon={item.icon}
+                  title={item.title}
+                  content={item.content}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </OfferMobileCardGroup>
       </OfferContainer>
       <WorkContainer>

@@ -2,6 +2,15 @@ import React, { FC, useState } from "react";
 
 import Image from "next/image";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper";
+
 import {
   AboutContainer,
   Header,
@@ -143,14 +152,27 @@ const About: FC = () => {
               </MiddleTextContent>
             </MiddleText>
             <MiddleCardGroupMobile>
-              <OfferCard
-                background={"#D1D1D1"}
-                icon={"hard"}
-                title={"Securing Documentation"}
-                content={
-                  "Purchasing a gun in California is a long and convoluted process. Our software delivers the exact forms you need to legally and safely buy a gun in the Bay Area."
-                }
-              />
+              <Swiper
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
+              >
+                {offerData.map((item, index) => {
+                  if (index) {
+                    return (
+                      <SwiperSlide key={index}>
+                        <OfferCard
+                          background={item.background}
+                          icon={item.icon}
+                          title={item.title}
+                          content={item.content}
+                        />
+                      </SwiperSlide>
+                    );
+                  }
+                })}
+              </Swiper>
             </MiddleCardGroupMobile>
             <MiddleCardGroup>
               {offerData.map((item, index) => {

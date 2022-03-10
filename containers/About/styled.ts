@@ -214,6 +214,7 @@ export const MiddleCardGroupMobile = styled.div`
   margin-top: 24px;
   @media screen and (max-width: 768px) {
     display: block;
+    max-width: 327px;
   }
 `;
 

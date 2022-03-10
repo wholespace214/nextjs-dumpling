@@ -4,11 +4,28 @@ type OfferCardProps = {
   color: string;
 };
 
-export const OfferCardDiv = styled.div`
+export const OfferCardDiv = styled.div<OfferCardProps>`
   padding: 35px;
-  background-color: ${(props: OfferCardProps) => props.color};
+  background: ${(props: OfferCardProps) => props.color};
   height: 265px;
   /* padding-bottom: 30px; */
+  :hover {
+    /* background: #272624;
+    color: #fff !important; */
+    animation: example;
+    animation-duration: 1s;
+
+    @keyframes example {
+      from {
+        background: ${(props: OfferCardProps) => props.color};
+        color: #000;
+      }
+      to {
+        background: #272624;
+        color: #fff;
+      }
+    }
+  }
 `;
 
 export const OfferCardIcon = styled.div``;
@@ -17,10 +34,9 @@ export const OfferCardTitle = styled.div`
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 24px;
-  color: ${(props: OfferCardProps) =>
-    props.color === "#272624" ? "#FFFFFF" : "#000000"};
+
   margin-top: 56px;
 `;
 
@@ -31,6 +47,4 @@ export const OfferCardText = styled.div`
   font-size: 14px;
   line-height: 24px;
   margin-top: 16px;
-  color: ${(props: OfferCardProps) =>
-    props.color === "#272624" ? "#FFFFFF" : "#000000"};
 `;
