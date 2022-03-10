@@ -5,10 +5,20 @@ export const BlogContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 100px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const BlogContainerLeft = styled.div`
   flex: 5;
+`;
+export const BlogImage = styled.div`
+  @media screen and (max-width: 768px) {
+    margin-top: -119px;
+    z-index: -100;
+    position: absolute;
+  }
 `;
 
 export const BlogList = styled.div`
@@ -17,6 +27,9 @@ export const BlogList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const BlogItem = styled.div`
@@ -29,17 +42,27 @@ export const BlogItem = styled.div`
 
 export const BlogContainerRight = styled.div`
   flex: 8;
+  @media screen and (max-width: 768px) {
+    margin-top: 330px;
+  }
 `;
 
 export const BlogText = styled.div`
   margin-top: 100px;
   margin-right: 150px;
+  @media screen and (max-width: 768px) {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
 `;
 
 export const BlogTextRead = styled.div`
   display: flex;
   flex-direction: row;
   gap: 7px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const BlogTextReadImage = styled.span`
@@ -63,6 +86,10 @@ export const BlogTextTitle = styled.div`
   font-size: 64px;
   line-height: 70px;
   color: #272624;
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 `;
 
 export const BlogTextContent = styled.div`
@@ -73,6 +100,11 @@ export const BlogTextContent = styled.div`
   font-size: 24px;
   line-height: 40px;
   max-width: 574px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 100%;
+  }
 `;
 
 export const BlogTextLink = styled.div`
@@ -80,6 +112,13 @@ export const BlogTextLink = styled.div`
   flex-direction: row;
   gap: 15px;
   margin-top: 44px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const BlogTextBtnMobile = styled.div`
+  margin-top: 40px;
 `;
 
 export const BlogTextLinkText = styled.div`
@@ -103,6 +142,9 @@ export const BlogCardGroup = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 180px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const BlogCardGroupLeft = styled.div`
@@ -119,9 +161,18 @@ export const BlogCardGroupRight = styled.div`
   flex-direction: column;
   gap: 56px;
   margin-left: 70px;
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
 `;
 
 export const BlogCardGroupBottom = styled.div`
   margin-top: 108px;
   margin-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 `;

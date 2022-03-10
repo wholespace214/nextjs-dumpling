@@ -18,6 +18,8 @@ import {
   BlogCardGroupBottom,
   BlogList,
   BlogItem,
+  BlogImage,
+  BlogTextBtnMobile,
 } from "./styled";
 
 import Image from "next/image";
@@ -35,11 +37,15 @@ import blog2 from "../../assets/images/blog_2.png";
 import blog3 from "../../assets/images/blog_3.png";
 import blog5 from "../../assets/images/blog_5.png";
 
+import Button from "@components/Button";
+
 const Blog: FC = () => {
   return (
     <BlogContainer>
       <BlogContainerLeft>
-        <Image src={blog}></Image>
+        <BlogImage>
+          <Image src={blog}></Image>
+        </BlogImage>
         <BlogList>
           <BlogItem>All</BlogItem>
           <BlogItem>firearms</BlogItem>
@@ -61,6 +67,10 @@ const Blog: FC = () => {
             Understanding animal health and environmental changes is critical to
             sustaining a healthy production line on a dairy farm
           </BlogTextContent>
+
+          <BlogTextBtnMobile>
+            <Button>Read more</Button>
+          </BlogTextBtnMobile>
           <BlogTextLink>
             <Link href={"/blog/page"}>
               <BlogTextLinkText>Read more</BlogTextLinkText>
