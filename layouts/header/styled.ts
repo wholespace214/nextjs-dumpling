@@ -113,3 +113,7 @@ export const MenuContainer = styled.div`
   height: 100vh;
   overflow: "overlay";
 `;
+
+export const UserIcon = styled.div`
+  margin-left: 40px;
+`;

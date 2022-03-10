@@ -1,9 +1,11 @@
 import React, { FC, ReactNode, useState } from "react";
+import { useMediaQuery } from "beautiful-react-hooks";
 
-import News from "../layouts/news";
-import Footer from "../layouts/footer";
-import Header from "../layouts/header";
-import Menu from "../layouts/menu";
+import News from "@layouts/news";
+import Footer from "@layouts/footer";
+import Header from "@layouts/header";
+import Header2 from "@layouts/header/index2";
+import Menu from "@layouts/menu";
 
 import { useRouter } from "next/router";
 
@@ -13,6 +15,7 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   const { pathname } = useRouter();
+  const isTabletMode = useMediaQuery("(max-width: 768px)");
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -26,7 +29,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <Menu handleClick={handleMenu} />
       ) : (
         <>
-          <Header handleClick={handleMenu} />
+          {isTabletMode ? (
+            <Header handleClick={handleMenu} />
+          ) : pathname === "/contact" ? (
+            <Header2 handleClick={handleMenu} />
+          ) : (
+            <Header handleClick={handleMenu} />
+          )}
           {children}
           {pathname === "/contact" ? "" : <News />}
           <Footer />
