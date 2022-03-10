@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -165,9 +166,11 @@ const Home: FC = () => {
             </FeatureCardImage>
             <FeatureCardFooter>
               <FeatureCardText>Software to firearms industry's</FeatureCardText>
-              <FeatureCardBack>
-                <Image src={right} />
-              </FeatureCardBack>
+              <Link href={"/features/software"}>
+                <FeatureCardBack>
+                  <Image src={right} />
+                </FeatureCardBack>
+              </Link>
             </FeatureCardFooter>
           </FeatureCard>
           <FeatureCard>
@@ -176,9 +179,11 @@ const Home: FC = () => {
             </FeatureCardImage>
             <FeatureCardFooter>
               <FeatureCardText>Concept retail store</FeatureCardText>
-              <FeatureCardBack>
-                <Image src={right} />
-              </FeatureCardBack>
+              <Link href={"/features/store"}>
+                <FeatureCardBack>
+                  <Image src={right} />
+                </FeatureCardBack>
+              </Link>
             </FeatureCardFooter>
           </FeatureCard>
         </AboutFeature>

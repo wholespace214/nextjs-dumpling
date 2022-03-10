@@ -164,6 +164,7 @@ export const FeatureCardImage = styled.div`
   margin-top: 57px;
   margin-left: auto;
   margin-right: auto;
+  height: 185px;
   @media screen and (max-width: 768px) {
     max-width: 279px;
   }
