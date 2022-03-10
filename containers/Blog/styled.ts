@@ -119,6 +119,10 @@ export const BlogTextLink = styled.div`
 
 export const BlogTextBtnMobile = styled.div`
   margin-top: 40px;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const BlogTextLinkText = styled.div`
@@ -144,6 +148,7 @@ export const BlogCardGroup = styled.div`
   margin-top: 180px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 24px;
   }
 `;
 
@@ -175,4 +180,38 @@ export const BlogCardGroupBottom = styled.div`
     margin-left: 12px;
     margin-right: 12px;
   }
+`;
+
+export const BlogMobileTitle = styled.div`
+  display: none;
+  font-family: Heavitas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: 0.01em;
+  margin-left: 12px;
+  margin-top: 40px;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const BlogMobileList = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+    gap: 24px;
+    margin-top: 100px;
+  }
+`;
+
+export const BlogMobileItem = styled.div`
+  font-family: Heavitas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
 `;

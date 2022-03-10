@@ -20,6 +20,9 @@ import {
   BlogItem,
   BlogImage,
   BlogTextBtnMobile,
+  BlogMobileTitle,
+  BlogMobileList,
+  BlogMobileItem,
 } from "./styled";
 
 import Image from "next/image";
@@ -68,9 +71,11 @@ const Blog: FC = () => {
             sustaining a healthy production line on a dairy farm
           </BlogTextContent>
 
-          <BlogTextBtnMobile>
-            <Button>Read more</Button>
-          </BlogTextBtnMobile>
+          <Link href={"/blog/page"}>
+            <BlogTextBtnMobile>
+              <Button>Read more</Button>
+            </BlogTextBtnMobile>
+          </Link>
           <BlogTextLink>
             <Link href={"/blog/page"}>
               <BlogTextLinkText>Read more</BlogTextLinkText>
@@ -80,6 +85,12 @@ const Blog: FC = () => {
             </BlogTextLinkIcon>
           </BlogTextLink>
         </BlogText>
+        <BlogMobileList>
+          <BlogMobileItem>ALL</BlogMobileItem>
+          <BlogMobileItem>Software</BlogMobileItem>
+          <BlogMobileItem>firearms</BlogMobileItem>
+        </BlogMobileList>
+        <BlogMobileTitle>Blog</BlogMobileTitle>
         <BlogCardGroup>
           <BlogCardGroupLeft>
             <BlogCard
