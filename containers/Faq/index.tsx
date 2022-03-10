@@ -10,9 +10,9 @@ import {
 } from "./styled";
 
 //  Import Icons
-import search from "../../assets/icons/search.png";
+import search from "@assets/icons/search.png";
 
-import FaqList from "../../components/FaqList";
+import FaqList from "@components/FaqList";
 
 const Faq: FC = () => {
   return (

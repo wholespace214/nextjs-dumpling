@@ -8,10 +8,10 @@ import {
 
 import Image from "next/image";
 
-import hard from "../../assets/icons/hard.png";
-import time from "../../assets/icons/time.png";
-import setting from "../../assets/icons/setting.png";
-import file from "../../assets/icons/file.png";
+import hard from "@assets/icons/hard.png";
+import time from "@assets/icons/time.png";
+import setting from "@assets/icons/setting.png";
+import file from "@assets/icons/file.png";
 
 interface OfferCardProps {
   background: string;

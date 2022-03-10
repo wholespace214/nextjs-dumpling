@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import About from "../../containers/About";
+import About from "@containers/About";
 
-import Layout from "../../layouts";
+import Layout from "@layouts/index";
 
 const Index: FC = () => {
   return (

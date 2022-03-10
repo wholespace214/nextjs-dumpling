@@ -10,7 +10,7 @@ import {
   CardBack,
 } from "./styled";
 
-import right from "../../assets/icons/right_black.png";
+import right from "@assets/icons/right_black.png";
 
 interface ProductCardProps {
   name: String;

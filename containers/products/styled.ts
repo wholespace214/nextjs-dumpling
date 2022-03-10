@@ -438,6 +438,7 @@ export const ModelButton = styled.div`
   margin-right: 32px;
   margin-top: 50px;
   margin-bottom: 32px;
+  cursor: pointer;
   :hover {
   }
 
@@ -489,13 +490,68 @@ export const ContentClose = styled.div`
   margin-left: 312px;
 `;
 
-interface MessageContentProps {
+interface MessageModelProps {
   show: boolean;
 }
 
+//! MessageModel
+
+export const MessageModel = styled.div`
+  display: ${(props: MessageModelProps) => (props.show ? "flex" : "none")};
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background: rgba(39, 38, 36, 0.8);
+`;
+
 export const MessageContent = styled.div`
-  display: ${(props: MessageContentProps) => (props.show ? "black" : "none")};
-  width: 100px;
-  height: 100px;
+  width: 573px;
+  height: 535px;
   background: white;
+  margin: auto;
+  /* @media screen and (max-width: 768px) {
+    width: 350px;
+    height: 350px;
+  } */
+`;
+
+export const MessageClose = styled.div`
+  margin-top: 35px;
+  margin-right: 35px;
+  float: right;
+  cursor: pointer;
+`;
+
+export const MessageCheck = styled.div`
+  margin-top: 111px;
+  margin-left: 243px;
+`;
+
+export const MessageTitle = styled.div`
+  font-family: "Heavitas [RUS by Daymarius]";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  margin-top: 73px;
+`;
+
+export const MessageText = styled.div`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  width: 373px;
+
+  margin-top: 8px;
+  margin-left: 85px;
 `;

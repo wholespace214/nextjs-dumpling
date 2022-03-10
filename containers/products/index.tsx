@@ -47,7 +47,12 @@ import {
   ModelHelpIcon,
   ModelHelpText,
   ModelButton,
+  MessageModel,
   MessageContent,
+  MessageClose,
+  MessageCheck,
+  MessageTitle,
+  MessageText,
 
   //
   MobileFilter,
@@ -59,24 +64,26 @@ import {
   ContentClose,
 } from "./styled";
 
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "@components/ProductCard";
 
 //  Import Icons
 
-import search from "../../assets/icons/search.png";
-import up from "../../assets/icons/up.png";
-import down from "../../assets/icons/down.png";
-import close from "../../assets/icons/close_black.png";
-import info from "../../assets/icons/info.png";
-import filter from "../../assets/icons/filter.png";
+import search from "@assets/icons/search.png";
+import up from "@assets/icons/up.png";
+import down from "@assets/icons/down.png";
+import close from "@assets/icons/close_black.png";
+import info from "@assets/icons/info.png";
+import filter from "@assets/icons/filter.png";
 
 //  Import Images
-import gun1 from "../../assets/images/gun_1.png";
-import gun2 from "../../assets/images/gun_2.png";
-import gun3 from "../../assets/images/gun_3.png";
-import gun4 from "../../assets/images/gun_4.png";
-import gun5 from "../../assets/images/gun_5.png";
-import gun6 from "../../assets/images/gun_6.png";
+import gun1 from "@assets/images/gun_1.png";
+import gun2 from "@assets/images/gun_2.png";
+import gun3 from "@assets/images/gun_3.png";
+import gun4 from "@assets/images/gun_4.png";
+import gun5 from "@assets/images/gun_5.png";
+import gun6 from "@assets/images/gun_6.png";
+
+import check from "@assets/icons/check.png";
 
 interface ProductDataJson {
   img: StaticImageData;
@@ -148,12 +155,12 @@ const Product: FC = () => {
   };
 
   useEffect(() => {
-    if (showModel || mobilFilterShow) {
+    if (showModel || mobilFilterShow || showMessage) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }, [showModel, mobilFilterShow]);
+  }, [showModel, mobilFilterShow, showMessage]);
 
   return (
     <>
@@ -345,10 +352,32 @@ const Product: FC = () => {
               acquainted with the availability and put it on reserve
             </ModelHelpText>
           </ModelHelp>
-          <ModelButton>reserve</ModelButton>
+          <ModelButton
+            onClick={() => {
+              setMessage(true);
+              setShowModel(false);
+            }}
+          >
+            reserve
+          </ModelButton>
         </ModelContent>
-        <MessageContent show={showMessage}></MessageContent>
       </ProductModel>
+
+      <MessageModel show={showMessage}>
+        <MessageContent>
+          <MessageClose onClick={() => setMessage(false)}>
+            <Image src={close} />
+          </MessageClose>
+          <MessageCheck>
+            <Image src={check} />
+          </MessageCheck>
+          <MessageTitle>Thanks for the reservation</MessageTitle>
+          <MessageText>
+            You have reserved this item. Our manager will contact you shortly to
+            clarify the rules of conduct
+          </MessageText>
+        </MessageContent>
+      </MessageModel>
 
       <MoblieFilterContent show={mobilFilterShow}>
         <Content>

@@ -50,20 +50,20 @@ import {
 } from "./styled";
 
 //  Image Import
-import about1 from "../../assets/images/about_1.png";
-import about1_mobile from "../../assets/images/about_1_mobile.png";
-import about2 from "../../assets/images/about_2.png";
-import about3 from "../../assets/images/about_3.png";
-import about4 from "../../assets/images/about_4.png";
-import about4_mobile from "../../assets/images/about_4_mobile.png";
-import about5 from "../../assets/images/about_5.png";
+import about1 from "@assets/images/about_1.png";
+import about1_mobile from "@assets/images/about_1_mobile.png";
+import about2 from "@assets/images/about_2.png";
+import about3 from "@assets/images/about_3.png";
+import about4 from "@assets/images/about_4.png";
+import about4_mobile from "@assets/images/about_4_mobile.png";
+import about5 from "@assets/images/about_5.png";
 
-import philosophy from "../../assets/images/philosophy.png";
-import philosophy2 from "../../assets/images/philosophy_2.png";
+import philosophy from "@assets/images/philosophy.png";
+import philosophy2 from "@assets/images/philosophy_2.png";
 
-import OfferCard from "../../components/OfferCard";
+import OfferCard from "@components/OfferCard";
 
-import Button from "../../components/Button";
+import Button from "@components/Button";
 
 const About: FC = () => {
   interface OfferData {

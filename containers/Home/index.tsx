@@ -62,21 +62,21 @@ import {
   BlogButton,
 } from "./styled";
 
-import OfferCard from "../../components/OfferCard";
-import BlogCard from "../../components/BlogCard";
+import OfferCard from "@components/OfferCard";
+import BlogCard from "@components/BlogCard";
 
-import safetyis from "../../assets/images/safetyis.png";
-import logo from "../../assets/images/logo.png";
-import feature1 from "../../assets/images/feature1.png";
-import feature2 from "../../assets/images/feature2.png";
-import right from "../../assets/icons/right.png";
-import work from "../../assets/images/work.png";
+import safetyis from "@assets/images/safetyis.png";
+import logo from "@assets/images/logo.png";
+import feature1 from "@assets/images/feature1.png";
+import feature2 from "@assets/images/feature2.png";
+import right from "@assets/icons/right.png";
+import work from "@assets/images/work.png";
 
-import blog1 from "../../assets/images/blog_1.png";
-import blog2 from "../../assets/images/blog_2.png";
-import blog3 from "../../assets/images/blog_3.png";
+import blog1 from "@assets/images/blog_1.png";
+import blog2 from "@assets/images/blog_2.png";
+import blog3 from "@assets/images/blog_3.png";
 
-import Button from "../../components/Button";
+import Button from "@components/Button";
 
 interface OfferDataType {
   background: string;

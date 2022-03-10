@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import Faq from "../../containers/Faq";
+import Faq from "@containers/Faq";
 
-import Layout from "../../layouts";
+import Layout from "@layouts/index";
 
 const Index: FC = () => {
   return (

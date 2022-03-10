@@ -29,16 +29,16 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-import blog from "../../assets/images/blog.png";
-import clock from "../../assets/icons/clock.png";
-import right from "../../assets/icons/right.png";
+import blog from "@assets/images/blog.png";
+import clock from "@assets/icons/clock.png";
+import right from "@assets/icons/right.png";
 
-import BlogCard from "../../components/BlogCard";
-import blog4 from "../../assets/images/blog_4.png";
-import blog1 from "../../assets/images/blog_1.png";
-import blog2 from "../../assets/images/blog_2.png";
-import blog3 from "../../assets/images/blog_3.png";
-import blog5 from "../../assets/images/blog_5.png";
+import BlogCard from "@components/BlogCard";
+import blog4 from "@assets/images/blog_4.png";
+import blog1 from "@assets/images/blog_1.png";
+import blog2 from "@assets/images/blog_2.png";
+import blog3 from "@assets/images/blog_3.png";
+import blog5 from "@assets/images/blog_5.png";
 
 import Button from "@components/Button";
 

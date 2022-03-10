@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import Contact from "../../containers/contact";
+import Contact from "@containers/contact";
 
-import Layout from "../../layouts";
+import Layout from "@layouts/index";
 
 const Index: FC = () => {
   return (

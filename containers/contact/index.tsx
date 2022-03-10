@@ -3,10 +3,10 @@ import Image from "next/image";
 
 import Styled from "./styled";
 
-import contact from "../../assets/images/contact.png";
+import contact from "@assets/images/contact.png";
 
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import Input from "@components/Input";
+import Button from "@components/Button";
 
 const Contact: FC = () => {
   return (

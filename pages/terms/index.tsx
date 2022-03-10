@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import Terms from "../../containers/Terms";
+import Terms from "@containers/Terms";
 
-import Layout from "../../layouts";
+import Layout from "@layouts/index";
 
 const Index: FC = () => {
   return (

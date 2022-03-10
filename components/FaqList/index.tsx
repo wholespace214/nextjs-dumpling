@@ -10,8 +10,8 @@ interface FaqListProps {
 }
 
 //  Import Icons
-import minus from "../../assets/icons/minus.png";
-import plus from "../../assets/icons/plus.png";
+import minus from "@assets/icons/minus.png";
+import plus from "@assets/icons/plus.png";
 
 const FaqList: FC<FaqListProps> = ({ title, children, open }) => {
   const [showText, setShowText] = useState<boolean>(false);

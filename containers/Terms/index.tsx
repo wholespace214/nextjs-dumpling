@@ -3,8 +3,8 @@ import Styled from "./styled";
 import Image from "next/image";
 
 //  Import Icons
-import download from "../../assets/icons/download.png";
-import forwad from "../../assets/icons/forwad.png";
+import download from "@assets/icons/download.png";
+import forwad from "@assets/icons/forwad.png";
 
 interface TermsDataType {
   title: String;
