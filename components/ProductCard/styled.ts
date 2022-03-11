@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.div`
-  height: 491px;
-  width: 290px;
-  /* border: 1px solid black; */
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  background: #f3f3f3;
-`;
-
 export const CardImage = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -53,4 +41,31 @@ export const CardPrice = styled.div`
 export const CardBack = styled.div`
   margin-left: 155px;
   cursor: pointer;
+`;
+
+export const ProductCardContainer = styled.div`
+  height: 491px;
+  width: 290px;
+  /* border: 1px solid black; */
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  background: #f3f3f3;
+  cursor: pointer;
+  :hover ${CardBack} {
+    margin-left: 165px;
+    animation: hover1;
+    animation-duration: 1s;
+
+    @keyframes hover1 {
+      from {
+        margin-left: 155px;
+      }
+      to {
+        margin-left: 165px;
+      }
+    }
+  }
 `;

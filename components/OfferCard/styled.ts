@@ -8,6 +8,7 @@ export const OfferCardDiv = styled.div<OfferCardProps>`
   padding: 35px;
   background: ${(props: OfferCardProps) => props.color};
   height: 265px;
+  cursor: pointer;
   /* padding-bottom: 30px; */
   :hover {
     /* background: #272624;

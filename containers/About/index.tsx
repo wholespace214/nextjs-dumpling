@@ -47,6 +47,8 @@ import {
   FooterMobileTitle,
   FooterMobileText,
   FooterBottom,
+  FooterTextNum,
+  FooterContent,
 } from "./styled";
 
 //  Image Import
@@ -98,6 +100,25 @@ const About: FC = () => {
     },
   ]);
 
+  const onScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const containerHeight = event.currentTarget.clientHeight;
+    const scrollHeight = event.currentTarget.scrollHeight;
+    const scrollTop = event.currentTarget.scrollTop;
+
+    console.log(containerHeight, scrollHeight, scrollTop);
+
+    if (scrollTop < 200) {
+      setScrollNum(1);
+    } else if (scrollTop < 400 && scrollTop > 200) {
+      setScrollNum(2);
+    } else if (scrollTop < 600 && scrollTop > 400) {
+      setScrollNum(3);
+    } else {
+      setScrollNum(4);
+    }
+  };
+
+  const [scrollNum, setScrollNum] = useState<number>(1);
   return (
     <AboutContainer>
       <Header>
@@ -206,13 +227,36 @@ const About: FC = () => {
       <Footer>
         <FooterMobileTitle>Our philosophy</FooterMobileTitle>
         <FooterMobileText>01/04</FooterMobileText>
-        <FooterText>
-          <FooterTextTitle>Family protection comes first</FooterTextTitle>
-          <FooterTextContent>
-            Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </FooterTextContent>
-        </FooterText>
+        <FooterContent>
+          <FooterText onScroll={onScroll}>
+            <FooterTextTitle>Family protection comes first</FooterTextTitle>
+            <FooterTextContent>
+              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </FooterTextContent>
+            <FooterTextTitle>Family protection comes first</FooterTextTitle>
+            <FooterTextContent>
+              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </FooterTextContent>
+            <FooterTextTitle>Family protection comes first</FooterTextTitle>
+            <FooterTextContent>
+              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </FooterTextContent>
+            <FooterTextTitle>Family protection comes first</FooterTextTitle>
+            <FooterTextContent>
+              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </FooterTextContent>
+          </FooterText>
+          <FooterTextNum>
+            <span>{scrollNum}</span>
+            <span>/</span>
+            <span>4</span>
+          </FooterTextNum>
+        </FooterContent>
+
         <FooterImage>
           <FooterImageOne>
             <Image src={about5} />

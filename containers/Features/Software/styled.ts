@@ -159,10 +159,31 @@ const BenefitsText = styled.div`
 
 const BenefitsSwiper = styled.div`
   margin-top: 56px;
-  cursor: pointer;
+  /* cursor: pointer; */
   @media screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+const BenefitsPage = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 34px;
+  margin-top: 60px;
+`;
+
+const BenefitsPageLeft = styled.div`
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+`;
+
+const BenefitsPageRight = styled.div`
+  transform: rotate(180deg);
+  align-items: center;
+  display: flex;
+  cursor: pointer;
 `;
 
 const BenefitsSwiperMobile = styled.div`
@@ -177,8 +198,10 @@ const BenefitsSwiperMobile = styled.div`
 //! Provide
 
 const Provide = styled.div`
-  padding: 128px 146px 130px 150px;
+  padding: 128px 0px 130px 0px;
   background: #272624;
+  display: flex;
+  flex-direction: column;
   @media screen and (max-width: 768px) {
     padding: 80px 24px 100px 24px;
   }
@@ -195,11 +218,15 @@ const ProvideTitle = styled.div`
   align-items: center;
   letter-spacing: 0.01em;
 
+  margin-left: 150px;
+
   color: #ffffff;
   @media screen and (max-width: 768px) {
     line-height: 50px;
   }
 `;
+
+const ProvideListDiv = styled.div``;
 
 const ProvideList = styled.div`
   margin-top: 56px;
@@ -207,6 +234,7 @@ const ProvideList = styled.div`
   flex-wrap: wrap;
   column-gap: 96px;
   row-gap: 56px;
+  justify-content: center;
 `;
 
 const ProvideItem = styled.div`
@@ -369,11 +397,15 @@ export default {
   BenefitsTitle,
   BenefitsText,
   BenefitsSwiper,
+  BenefitsPage,
   BenefitsSwiperMobile,
+  BenefitsPageLeft,
+  BenefitsPageRight,
 
   //?  Provide
   Provide,
   ProvideTitle,
+  ProvideListDiv,
   ProvideList,
   ProvideItem,
   ItemIcon,

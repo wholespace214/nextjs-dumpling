@@ -25,6 +25,39 @@ body {
 input[type="checkbox"] {
   background-color: initial;
 }
+/* .swiper{
+  overflow-x: hidden !important;
+  overflow-y: clip !important;
+}
+.swiper-pagination-horizontal {
+  margin-bottom: -32px !important;
+  overflow: hidden !important;
+} */
+/* .swiper swiper-initialized swiper-horizontal swiper-ios {
+  overflow-x: hidden !important;
+  overflow-y: clip !important;
+}
+.swiper .swiper-initialized .swiper-horizontal .swiper-ios{
+  overflow-x: hidden !important;
+  overflow-y: clip !important;
+} */
+/* .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  margin-bottom: -32px !important;
+}
+.myswiper {
+  overflow: clip !important;
+  overflow-x: hidden !important;
+  overflow-y: clip !important;
+
+} */
+.loading {
+  animation-name: loading;
+  animation-duration: 1s;
+}
+@keyframes loading {
+  from {opacity:0}
+  to {opacity: 1}
+}
 `;
 
 export default GlobalStyle;

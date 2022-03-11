@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 //TODO import icon
 import left from "@assets/icons/left.png";
@@ -56,12 +57,14 @@ const BlogPage: FC = () => {
       <BlogImage>
         <Image src={blog}></Image>
       </BlogImage>
-      <BlogBackBtn>
-        <BlogBackBtnIcon>
-          <Image src={left} />
-        </BlogBackBtnIcon>
-        <BlogBackBtnText>back</BlogBackBtnText>
-      </BlogBackBtn>
+      <Link href={"/blog"}>
+        <BlogBackBtn>
+          <BlogBackBtnIcon>
+            <Image src={left} />
+          </BlogBackBtnIcon>
+          <BlogBackBtnText>back</BlogBackBtnText>
+        </BlogBackBtn>
+      </Link>
       <BlogPageContainer>
         <BlogPageContainerLeft>
           <LeftHeader>

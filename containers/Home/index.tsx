@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+// import { Pagination } from "swiper";
 
 import {
   SafetyisContainer,
@@ -60,6 +60,8 @@ import {
   BlogGroupOne,
   BlogGroupTwo,
   BlogButton,
+  WorkOnlineDiv,
+  WorkonlineNum,
 } from "./styled";
 
 import OfferCard from "@components/OfferCard";
@@ -77,6 +79,8 @@ import blog2 from "@assets/images/blog_2.png";
 import blog3 from "@assets/images/blog_3.png";
 
 import Button from "@components/Button";
+
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 interface OfferDataType {
   background: string;
@@ -123,6 +127,26 @@ const Home: FC = () => {
         "Never worry about filling out and keeping physical records again, the majority of all the paperwork is done digitally (on-site). This allows real-time validations and will catch human error before submission.",
     },
   ]);
+
+  const onScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const containerHeight = event.currentTarget.clientHeight;
+    const scrollHeight = event.currentTarget.scrollHeight;
+    const scrollTop = event.currentTarget.scrollTop;
+
+    console.log(containerHeight, scrollHeight, scrollTop);
+
+    if (scrollTop < 200) {
+      setScrollNum(1);
+    } else if (scrollTop < 400 && scrollTop > 200) {
+      setScrollNum(2);
+    } else if (scrollTop < 600 && scrollTop > 400) {
+      setScrollNum(3);
+    } else {
+      setScrollNum(4);
+    }
+  };
+
+  const [scrollNum, setScrollNum] = useState<number>(1);
   return (
     <div>
       <SafetyisContainer>
@@ -160,32 +184,34 @@ const Home: FC = () => {
           </AboutContent>
         </AboutText>
         <AboutFeature>
-          <FeatureCard>
-            <FeatureCardImage>
-              <Image src={feature1} />
-            </FeatureCardImage>
-            <FeatureCardFooter>
-              <FeatureCardText>Software to firearms industry's</FeatureCardText>
-              <Link href={"/features/software"}>
+          <Link href={"/features/software"}>
+            <FeatureCard>
+              <FeatureCardImage>
+                <Image src={feature1} />
+              </FeatureCardImage>
+              <FeatureCardFooter>
+                <FeatureCardText>
+                  Software to firearms industry's
+                </FeatureCardText>
                 <FeatureCardBack>
                   <Image src={right} />
                 </FeatureCardBack>
-              </Link>
-            </FeatureCardFooter>
-          </FeatureCard>
-          <FeatureCard>
-            <FeatureCardImage>
-              <Image src={feature2} />
-            </FeatureCardImage>
-            <FeatureCardFooter>
-              <FeatureCardText>Concept retail store</FeatureCardText>
-              <Link href={"/features/store"}>
+              </FeatureCardFooter>
+            </FeatureCard>
+          </Link>
+          <Link href={"/features/store"}>
+            <FeatureCard>
+              <FeatureCardImage>
+                <Image src={feature2} />
+              </FeatureCardImage>
+              <FeatureCardFooter>
+                <FeatureCardText>Concept retail store</FeatureCardText>
                 <FeatureCardBack>
                   <Image src={right} />
                 </FeatureCardBack>
-              </Link>
-            </FeatureCardFooter>
-          </FeatureCard>
+              </FeatureCardFooter>
+            </FeatureCard>
+          </Link>
         </AboutFeature>
       </AboutContainer>
       <OfferContainer>
@@ -269,10 +295,19 @@ const Home: FC = () => {
         </OfferMobileText>
         <OfferMobileCardGroup>
           <Swiper
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            // modules={[Pagination]}
+            className="myswiper"
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            // slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
           >
             {offerData.map((item, index) => (
               <SwiperSlide key={index}>
@@ -297,13 +332,35 @@ const Home: FC = () => {
           </WorkHeaderText>
         </WorkHeader>
         <WorkOnline>
-          <WorkOnlineText>
-            <WorkOnlineTextTitle>Сhoose a weapon online</WorkOnlineTextTitle>
-            <WorkOnlineTextContent>
-              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </WorkOnlineTextContent>
-          </WorkOnlineText>
+          <WorkOnlineDiv>
+            <WorkOnlineText onScroll={onScroll}>
+              <WorkOnlineTextTitle>Сhoose a weapon online1</WorkOnlineTextTitle>
+              <WorkOnlineTextContent>
+                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </WorkOnlineTextContent>
+              <WorkOnlineTextTitle>Сhoose a weapon online2</WorkOnlineTextTitle>
+              <WorkOnlineTextContent>
+                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </WorkOnlineTextContent>
+              <WorkOnlineTextTitle>Сhoose a weapon online3</WorkOnlineTextTitle>
+              <WorkOnlineTextContent>
+                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </WorkOnlineTextContent>
+              <WorkOnlineTextTitle>Сhoose a weapon online4</WorkOnlineTextTitle>
+              <WorkOnlineTextContent>
+                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </WorkOnlineTextContent>
+            </WorkOnlineText>
+            <WorkonlineNum>
+              <span>{scrollNum}</span>
+              <span>/</span>
+              <span>4</span>
+            </WorkonlineNum>
+          </WorkOnlineDiv>
           <WorkOnlineImage>
             <Image src={work} />
           </WorkOnlineImage>

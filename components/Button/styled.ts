@@ -13,10 +13,12 @@ const ButtonContainer = styled.div`
   :hover {
     background: #e9342e;
     border: 1px solid #e9342e;
+    color: white !important;
   }
   :active {
     background: #ac221c;
     border: 1px solid #ac221c;
+    color: white !important;
   }
 `;
 
@@ -31,7 +33,6 @@ const Text = styled.div`
   text-align: center;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #272624;
   :hover {
     color: white;
   }

@@ -49,13 +49,10 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
         <Image src={logo} width={134.17} height={30.59} />
       </Logo>
       <Tool>
-        <SearchImag>
-          <Image src={search} width={20} height={20} />
-        </SearchImag>
         <LanDiv>
-          <LanSelect>
+          <LanSelect onClick={() => setShowOption(!showOption)}>
             <LanText>{selectOption}</LanText>
-            <DownIcon onClick={() => setShowOption(!showOption)}>
+            <DownIcon>
               <Image src={down} />
             </DownIcon>
           </LanSelect>

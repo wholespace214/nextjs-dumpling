@@ -28,6 +28,7 @@ export const BlogBackBtn = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
+  cursor: pointer;
 `;
 
 export const BlogBackBtnText = styled.div`

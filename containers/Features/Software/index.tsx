@@ -2,6 +2,8 @@ import React, { FC, useState } from "react";
 
 import Image from "next/image";
 
+import SwiperCore, { Navigation } from "swiper";
+SwiperCore.use([Navigation]);
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -37,6 +39,9 @@ import software1_mobile from "@assets/images/software_1_mobile.png";
 import software2 from "@assets/images/software_2.png";
 import logo from "@assets/images/logo.png";
 import description from "@assets/images/description.png";
+
+import left_black from "@assets/icons/left-black.png";
+import right_red from "@assets/icons/right-red.png";
 
 interface OfferDataType {
   background: string;
@@ -180,10 +185,13 @@ const Software: FC = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={115}
-            pagination={{
-              clickable: true,
+            // pagination={{
+            //   clickable: true,
+            // }}
+            navigation={{
+              prevEl: ".prev",
+              nextEl: ".next",
             }}
-            modules={[Pagination]}
           >
             {offerData.map((item, index) => (
               <SwiperSlide key={index}>
@@ -195,6 +203,14 @@ const Software: FC = () => {
                 />
               </SwiperSlide>
             ))}
+            <Styled.BenefitsPage>
+              <Styled.BenefitsPageLeft className="prev">
+                <Image src={left_black} />
+              </Styled.BenefitsPageLeft>
+              <Styled.BenefitsPageRight className="next">
+                <Image src={left_black} />
+              </Styled.BenefitsPageRight>
+            </Styled.BenefitsPage>
           </Swiper>
         </Styled.BenefitsSwiper>
         <Styled.BenefitsSwiperMobile>
@@ -219,6 +235,7 @@ const Software: FC = () => {
       </Styled.Benefits>
       <Styled.Provide>
         <Styled.ProvideTitle>what we provide</Styled.ProvideTitle>
+        {/* <Styled.ProvideListDiv> */}
         <Styled.ProvideList>
           {provideData.map((item, index) => (
             <Styled.ProvideItem key={index}>
@@ -232,6 +249,7 @@ const Software: FC = () => {
             </Styled.ProvideItem>
           ))}
         </Styled.ProvideList>
+        {/* </Styled.ProvideListDiv> */}
       </Styled.Provide>
       <Styled.Description>
         <Styled.DescriptionText>

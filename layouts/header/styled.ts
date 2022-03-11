@@ -51,6 +51,7 @@ export const SearchImag = styled.div`
 export const LanSelect = styled.div`
   display: flex;
   margin-left: 42px;
+  cursor: pointer;
 `;
 
 interface LanOptionDivProps {

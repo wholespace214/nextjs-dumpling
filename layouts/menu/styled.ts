@@ -4,17 +4,30 @@ export const MenuContainer = styled.div`
   margin: 0;
   background-color: #272624;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 768px) {
   }
+  animation-name: menuRight;
+  animation-duration: 0.5s;
+
+  @keyframes menuRight {
+    from {
+      width: 0vw;
+    }
+    to {
+      right: 100vw;
+    }
+  }
 `;
 
 export const MenuBlock = styled.div`
-  padding: 140px 483px 0px 392px;
+  padding: 140px 0px 0px 0px;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   gap: 48px;
   @media screen and (max-width: 768px) {
     padding: 171px 0px 0px 30px;
@@ -32,6 +45,9 @@ export const MenuItem = styled.div`
   align-items: center;
   letter-spacing: 0.01em;
   cursor: pointer;
+  :hover {
+    color: red;
+  }
   @media screen and (max-width: 768px) {
     font-family: "Heavitas [RUS by Daymarius]";
     font-style: normal;

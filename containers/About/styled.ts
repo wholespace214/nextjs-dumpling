@@ -158,14 +158,21 @@ export const MiddleBackground = styled.div`
 
 export const MiddleContent = styled.div`
   padding-top: 159px;
-  padding-left: 370px;
-  padding-right: 370px;
+  padding-left: 250px;
+  padding-right: 250px;
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
   @media screen and (max-width: 768px) {
     padding: 0;
   }
 `;
 
 export const MiddleText = styled.div`
+  margin-left: 124px;
+  /* margin-left: auto; */
   @media screen and (max-width: 768px) {
     margin-left: 24px;
     margin-right: 24px;
@@ -213,17 +220,22 @@ export const MiddleCardGroupMobile = styled.div`
   margin-right: 24px;
   margin-top: 24px;
   @media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
     max-width: 327px;
+    justify-content: center;
   }
 `;
 
 export const MiddleCardHeader = styled.div`
+  /* display: none; */
   width: 340px;
   height: 350px;
   position: absolute;
   top: 500px;
   left: 1050px;
+  @media screen and (max-width: 1439px) {
+    display: none;
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -233,6 +245,7 @@ export const MiddleCardGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -285,10 +298,33 @@ export const FooterMobileText = styled.div`
 
 export const FooterText = styled.div`
   margin-top: 153px;
+  overflow-y: scroll;
+  height: 300px;
+  padding-right: 10px;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   @media screen and (max-width: 768px) {
     margin-top: 0px;
   }
 `;
+
+export const FooterContent = styled.div``;
 
 export const FooterTextTitle = styled.div`
   font-family: Roboto;
@@ -297,6 +333,11 @@ export const FooterTextTitle = styled.div`
   font-size: 21px;
   line-height: 24px;
   color: #272624;
+  margin-top: 100px;
+`;
+
+export const FooterTextNum = styled.div`
+  margin-top: 200px;
 `;
 
 export const FooterTextContent = styled.div`
@@ -307,6 +348,7 @@ export const FooterTextContent = styled.div`
   font-size: 14px;
   line-height: 24px;
   width: 275px;
+  margin-bottom: 100px;
   @media screen and (max-width: 768px) {
     width: 100%;
     margin-bottom: 48px;

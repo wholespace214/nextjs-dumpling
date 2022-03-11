@@ -154,11 +154,6 @@ export const AboutFeature = styled.div`
   }
 `;
 
-export const FeatureCard = styled.div`
-  flex: 1;
-  background-color: #f3f3f3;
-`;
-
 export const FeatureCardImage = styled.div`
   text-align: center;
   margin-top: 57px;
@@ -192,6 +187,27 @@ export const FeatureCardBack = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-left: 100px;
+`;
+
+export const FeatureCard = styled.div`
+  flex: 1;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  :hover ${FeatureCardFooter} {
+    margin-right: 25px;
+    animation: hover1;
+    animation-duration: 1s;
+
+    @keyframes hover1 {
+      from {
+        margin-right: 36.5px;
+      }
+      to {
+        margin-right: 25px;
+      }
+    }
+  }
 `;
 
 export const OfferContainer = styled.div`
@@ -321,9 +337,39 @@ export const WorkOnline = styled.div`
   }
 `;
 
+export const WorkOnlineDiv = styled.div`
+  margin-top: 100px;
+`;
+
+export const WorkonlineNum = styled.div`
+  margin-top: 80px;
+`;
+
 export const WorkOnlineImage = styled.div``;
 
-export const WorkOnlineText = styled.div``;
+export const WorkOnlineText = styled.div`
+  /* border: 1px solid black; */
+  overflow-y: scroll;
+  height: 300px;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+`;
 
 export const WorkOnlineTextTitle = styled.div`
   font-family: Roboto;
@@ -332,7 +378,7 @@ export const WorkOnlineTextTitle = styled.div`
   font-size: 21px;
   line-height: 24px;
   color: #000000;
-  margin-top: 189px;
+  margin-top: 100px;
   @media screen and (max-width: 768px) {
     margin-top: 0;
   }
@@ -346,6 +392,7 @@ export const WorkOnlineTextContent = styled.div`
   line-height: 24px;
   max-width: 275px;
   margin-top: 16px;
+  margin-bottom: 100px;
   @media screen and (max-width: 768px) {
     max-width: 100%;
   }

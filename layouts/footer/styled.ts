@@ -46,12 +46,23 @@ export const FooterListTwo = styled.div`
   }
 `;
 
+export const FooterItemHr = styled.hr``;
+
 export const FooterItem = styled.div`
   margin-top: 20px;
   cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  :hover {
+    color: red;
+  }
+  :hover ${FooterItemHr} {
+    background-color: red;
+  }
 `;
-
-export const FooterItemHr = styled.hr``;
 
 export const FooterTool = styled.div`
   @media screen and (max-width: 768px) {
@@ -91,7 +102,7 @@ export const FooterVisa = styled.div`
 
 export const FooterToolText = styled.div`
   display: flex;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -120,7 +131,7 @@ export const MiddleList = styled.div`
 `;
 
 export const MiddelItem = styled.div`
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 13px;

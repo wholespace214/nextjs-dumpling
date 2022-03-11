@@ -42,9 +42,6 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
         <Image src={logo} width={134.17} height={30.59} />
       </Logo>
       <Tool>
-        <SearchImag>
-          <Image src={search} width={20} height={20} />
-        </SearchImag>
         <UserIcon>
           <Image src={user} width={20} height={20} />
         </UserIcon>
