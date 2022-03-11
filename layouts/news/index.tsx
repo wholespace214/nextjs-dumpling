@@ -5,6 +5,7 @@ import {
   NewsTextBlack,
   NewsButton,
   EmailGroup,
+  NewsDiv,
 } from "./styled";
 
 import Input from "@components/Input2";
@@ -12,12 +13,14 @@ import Input from "@components/Input2";
 const News: FC = () => {
   return (
     <NewsContainer>
-      <NewsTextWhite>stay up to date with all news</NewsTextWhite>
-      <NewsTextBlack>in the firearms industry</NewsTextBlack>
-      <EmailGroup>
-        <Input label={"Email"} />
-      </EmailGroup>
-      <NewsButton>subscribe</NewsButton>
+      <NewsDiv>
+        <NewsTextWhite>stay up to date with all news</NewsTextWhite>
+        <NewsTextBlack>in the firearms industry</NewsTextBlack>
+        <EmailGroup>
+          <Input label={"Email"} />
+        </EmailGroup>
+        <NewsButton>subscribe</NewsButton>
+      </NewsDiv>
     </NewsContainer>
   );
 };

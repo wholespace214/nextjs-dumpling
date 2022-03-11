@@ -2,12 +2,18 @@ import styled from "styled-components";
 
 export const NewsContainer = styled.div`
   margin: 64px 32px 0px 34px;
-  padding: 140px 401px 140px 114px;
+  padding: 140px 0px 140px 0px;
   background-color: #272624;
+  display: flex;
+  flex-direction: column;
   @media screen and (max-width: 768px) {
     margin: 0;
     padding: 112px 24px 90px 24px;
   }
+`;
+
+export const NewsDiv = styled.div`
+  margin: auto;
 `;
 
 export const NewsTextWhite = styled.div`
