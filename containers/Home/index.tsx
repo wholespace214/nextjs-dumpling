@@ -80,6 +80,7 @@ import blog2 from "@assets/images/blog_2.png";
 import blog3 from "@assets/images/blog_3.png";
 
 import Button from "@components/Button";
+import ScrollView from "@components/ScrollView";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
@@ -332,55 +333,7 @@ const Home: FC = () => {
             confirmation of documents with each purchase
           </WorkHeaderText>
         </WorkHeader>
-        <WorkOnline>
-          <WorkOnlineDiv>
-            <WorkOnlineText onScroll={onScroll}>
-              <WorkOnlineTextTitle>Сhoose a weapon online1</WorkOnlineTextTitle>
-              <WorkOnlineTextContent>
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </WorkOnlineTextContent>
-              <WorkOnlineTextTitle>Сhoose a weapon online2</WorkOnlineTextTitle>
-              <WorkOnlineTextContent>
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </WorkOnlineTextContent>
-              <WorkOnlineTextTitle>Сhoose a weapon online3</WorkOnlineTextTitle>
-              <WorkOnlineTextContent>
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </WorkOnlineTextContent>
-              <WorkOnlineTextTitle>Сhoose a weapon online4</WorkOnlineTextTitle>
-              <WorkOnlineTextContent>
-                Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </WorkOnlineTextContent>
-            </WorkOnlineText>
-            <WorkonlineNum>
-              <span>{scrollNum}</span>
-              <span>/</span>
-              <span>4</span>
-            </WorkonlineNum>
-          </WorkOnlineDiv>
-          <WorkOnlineDivMobile>
-            <WorkonlineNum>
-              <span>{scrollNum}</span>
-              <span>/</span>
-              <span>4</span>
-            </WorkonlineNum>
-            <WorkOnlineTextTitle>Сhoose a weapon online4</WorkOnlineTextTitle>
-            <WorkOnlineTextContent>
-              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </WorkOnlineTextContent>
-          </WorkOnlineDivMobile>
-          <WorkOnlineImage>
-            <Image src={work} />
-          </WorkOnlineImage>
-        </WorkOnline>
-        <WorkButton>
-          <Button>READ MORE</Button>
-        </WorkButton>
+        <ScrollView></ScrollView>
       </WorkContainer>
 
       <BlogContainer>

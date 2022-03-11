@@ -431,7 +431,7 @@ export const WorkButton = styled.div`
 `;
 
 export const BlogContainer = styled.div`
-  margin-top: 130px;
+  /* margin-top: 130px; */
   padding: 200px 261px 100px 34px;
   display: flex;
   flex-direction: row;
