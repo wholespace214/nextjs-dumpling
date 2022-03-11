@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   StyledContainer,
   Menu,
@@ -45,9 +46,11 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
       >
         <Image src={menu} width={39.75} height={14} />
       </Menu>
-      <Logo>
-        <Image src={logo} width={134.17} height={30.59} />
-      </Logo>
+      <Link href={"/"}>
+        <Logo>
+          <Image src={logo} width={134.17} height={30.59} />
+        </Logo>
+      </Link>
       <Tool>
         <LanDiv>
           <LanSelect onClick={() => setShowOption(!showOption)}>

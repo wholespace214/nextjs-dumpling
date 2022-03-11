@@ -114,15 +114,15 @@ const Footer: FC = () => {
             <Link href={"/terms"}>
               <MiddelItem>Terms & Conditions</MiddelItem>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/terms"}>
               <MiddelItem>Privacy Policy</MiddelItem>
             </Link>
           </MiddleList>
           <MiddleList>
-            <Link href={"/"}>
+            <Link href={"/terms"}>
               <MiddelItem>Shipping Policy</MiddelItem>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/terms"}>
               <MiddelItem>Refund Policy</MiddelItem>
             </Link>
           </MiddleList>

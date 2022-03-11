@@ -298,7 +298,7 @@ const Product: FC = () => {
       </ProductContainer>
 
       <ProductModel show={showModel}>
-        <ModelContent show={!showMessage}>
+        <ModelContent show={!showMessage} showModel={showModel}>
           <CloseButton onClick={() => setShowModel(false)}>
             <Image src={close}></Image>
           </CloseButton>

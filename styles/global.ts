@@ -58,6 +58,24 @@ input[type="checkbox"] {
   from {opacity:0}
   to {opacity: 1}
 }
+.hidden {
+  display: none;
+}
+.visuallyhidden {
+  opacity: 0;
+}
+.faqlist-Text-Show {
+  animation-name: faqlistTextShow;
+  animation-duration: 3s;
+}
+@keyframes faqlistTextShow {
+  from{
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+} 
 `;
 
 export default GlobalStyle;

@@ -45,6 +45,10 @@ export const BlogItem = styled.div`
   font-weight: 100;
   font-size: 24px;
   line-height: 30px;
+  :hover {
+    color: red;
+  }
+  cursor: pointer;
 `;
 
 export const BlogContainerRight = styled.div`
@@ -191,7 +195,7 @@ export const BlogCardGroupBottom = styled.div`
 
 export const BlogMobileTitle = styled.div`
   display: none;
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -216,9 +220,13 @@ export const BlogMobileList = styled.div`
 `;
 
 export const BlogMobileItem = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
+  :hover {
+    color: red;
+  }
+  cursor: pointer;
 `;

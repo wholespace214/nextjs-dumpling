@@ -312,7 +312,7 @@ const DescriptionImage = styled.div`
 //! Partners
 
 const Partners = styled.div`
-  padding: 226px 148px 0px 261px;
+  padding: 226px 0px 0px 0px;
   @media screen and (max-width: 768px) {
     padding: 0 0 0 26px;
     margin-top: 110px;
@@ -320,7 +320,7 @@ const Partners = styled.div`
 `;
 
 const PartnersText = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -329,11 +329,15 @@ const PartnersText = styled.div`
   align-items: center;
   letter-spacing: 0.01em;
   color: #272624;
+  justify-content: center;
+  margin-right: 810px;
 `;
 
 const PartnersList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  max-width: 1040px;
 
   margin-top: 58px;
   @media screen and (max-width: 768px) {

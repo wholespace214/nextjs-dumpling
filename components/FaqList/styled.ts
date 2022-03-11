@@ -11,6 +11,7 @@ export const FaqListContainer = styled.div`
   border: 1px solid rgba(22, 23, 28, 0.07);
   background: ${(props: FaqContainerProps) =>
     props.open ? "#F3F3F3" : "white"};
+  transition: all 1s linear;
 `;
 
 export const Title = styled.div`
@@ -36,7 +37,8 @@ export const TitleIcon = styled.div`
 `;
 
 export const Text = styled.div`
-  display: ${(props: FaqContainerProps) => (props.open ? "block" : "none")};
+  /* display: ${(props: FaqContainerProps) =>
+    props.open ? "block" : "none"}; */
   margin-top: 16px;
   max-width: 775px;
 
@@ -46,4 +48,5 @@ export const Text = styled.div`
   font-size: 14px;
   line-height: 24px;
   color: #272624;
+  transition: all 1s linear;
 `;

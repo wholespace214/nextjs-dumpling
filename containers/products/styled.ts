@@ -266,15 +266,28 @@ export const ProductModel = styled.div`
 
 interface ModelContentProps {
   show: boolean;
+  showModel: Boolean;
 }
 
 export const ModelContent = styled.div`
   display: ${(props: ModelContentProps) => (props.show ? "block" : "none")};
+  /* width: ${(props: ModelContentProps) => (props.showModel ? 377 : 0)}px; */
   height: 100vh;
   overflow-y: scroll;
   width: 377px;
   background-color: white;
   float: right;
+  animation-name: ModelShow;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  @keyframes ModelShow {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 377px;
+    }
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }
