@@ -216,8 +216,8 @@ export const MiddleTextContent = styled.div`
 
 export const MiddleCardGroupMobile = styled.div`
   display: none;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 24px;
   @media screen and (max-width: 768px) {
     display: flex;
@@ -324,7 +324,18 @@ export const FooterText = styled.div`
   }
 `;
 
-export const FooterContent = styled.div``;
+export const FooterContent = styled.div`
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const FooterContentMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
 
 export const FooterTextTitle = styled.div`
   font-family: Roboto;
@@ -334,6 +345,9 @@ export const FooterTextTitle = styled.div`
   line-height: 24px;
   color: #272624;
   margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const FooterTextNum = styled.div`

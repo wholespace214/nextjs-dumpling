@@ -62,6 +62,7 @@ import {
   BlogButton,
   WorkOnlineDiv,
   WorkonlineNum,
+  WorkOnlineDivMobile,
 } from "./styled";
 
 import OfferCard from "@components/OfferCard";
@@ -361,6 +362,18 @@ const Home: FC = () => {
               <span>4</span>
             </WorkonlineNum>
           </WorkOnlineDiv>
+          <WorkOnlineDivMobile>
+            <WorkonlineNum>
+              <span>{scrollNum}</span>
+              <span>/</span>
+              <span>4</span>
+            </WorkonlineNum>
+            <WorkOnlineTextTitle>Сhoose a weapon online4</WorkOnlineTextTitle>
+            <WorkOnlineTextContent>
+              Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </WorkOnlineTextContent>
+          </WorkOnlineDivMobile>
           <WorkOnlineImage>
             <Image src={work} />
           </WorkOnlineImage>

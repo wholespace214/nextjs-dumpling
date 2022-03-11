@@ -49,6 +49,7 @@ import {
   FooterBottom,
   FooterTextNum,
   FooterContent,
+  FooterContentMobile,
 } from "./styled";
 
 //  Image Import
@@ -256,6 +257,13 @@ const About: FC = () => {
             <span>4</span>
           </FooterTextNum>
         </FooterContent>
+        <FooterContentMobile>
+          <FooterTextTitle>Family protection comes first</FooterTextTitle>
+          <FooterTextContent>
+            Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </FooterTextContent>
+        </FooterContentMobile>
 
         <FooterImage>
           <FooterImageOne>

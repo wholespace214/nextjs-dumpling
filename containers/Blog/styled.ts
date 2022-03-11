@@ -12,12 +12,19 @@ export const BlogContainer = styled.div`
 
 export const BlogContainerLeft = styled.div`
   flex: 5;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 `;
 export const BlogImage = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: -119px;
     z-index: -100;
     position: absolute;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -43,7 +50,7 @@ export const BlogItem = styled.div`
 export const BlogContainerRight = styled.div`
   flex: 8;
   @media screen and (max-width: 768px) {
-    margin-top: 330px;
+    margin-top: 90vw;
   }
 `;
 

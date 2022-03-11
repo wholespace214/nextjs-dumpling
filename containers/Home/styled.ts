@@ -339,10 +339,29 @@ export const WorkOnline = styled.div`
 
 export const WorkOnlineDiv = styled.div`
   margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const WorkOnlineDivMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const WorkonlineNum = styled.div`
   margin-top: 80px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const WorkOnlineImage = styled.div``;
@@ -395,6 +414,8 @@ export const WorkOnlineTextContent = styled.div`
   margin-bottom: 100px;
   @media screen and (max-width: 768px) {
     max-width: 100%;
+    margin-top: 16px;
+    margin-bottom: 0px;
   }
 `;
 

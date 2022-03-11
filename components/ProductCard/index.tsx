@@ -26,14 +26,14 @@ const ProductCard: FC<ProductCardProps> = ({
   handleShowModel,
 }) => {
   return (
-    <ProductCardContainer>
+    <ProductCardContainer onClick={() => handleShowModel()}>
       <CardImage>
         <Image src={img}></Image>
       </CardImage>
       <CardName>{name}</CardName>
       <CardBottom>
         <CardPrice>$ {price}</CardPrice>
-        <CardBack onClick={() => handleShowModel()}>
+        <CardBack>
           <Image src={right}></Image>
         </CardBack>
       </CardBottom>
