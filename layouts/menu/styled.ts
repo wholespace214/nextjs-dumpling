@@ -8,6 +8,8 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 768px) {
+    flex-direction: row-reverse;
+    float: right;
   }
   animation-name: menuRight;
   animation-duration: 0.5s;
@@ -38,7 +40,7 @@ export const MenuItem = styled.div`
   font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 4em;
   line-height: 70px;
   color: #fff;
   display: flex;
@@ -62,7 +64,14 @@ export const MenuClose = styled.div`
   padding-left: 70px;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    padding-top: 46px;
-    padding-left: 38px;
+    display: none;
+  }
+`;
+export const MenuMobileClose = styled.div`
+  display: none;
+  padding-top: 46px;
+  padding-left: 38px;
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 `;

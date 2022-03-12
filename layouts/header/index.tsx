@@ -25,10 +25,12 @@ import down from "@assets/icons/down.png";
 
 interface HeaderProps {
   handleClick: Function;
+  showOption: boolean;
+  dropDown: Function;
 }
 
-const Header: FC<HeaderProps> = ({ handleClick }) => {
-  const [showOption, setShowOption] = useState<boolean>(false);
+const Header: FC<HeaderProps> = ({ handleClick, showOption, dropDown }) => {
+  // const [showOption, setShowOption] = useState<boolean>(false);
   const [optionList, setOptionList] = useState<Array<string>>([
     "ENG",
     "FRA",
@@ -53,7 +55,7 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
       </Link>
       <Tool>
         <LanDiv>
-          <LanSelect onClick={() => setShowOption(!showOption)}>
+          <LanSelect onClick={() => dropDown(!showOption)}>
             <LanText>{selectOption}</LanText>
             <DownIcon>
               <Image src={down} />
@@ -66,7 +68,7 @@ const Header: FC<HeaderProps> = ({ handleClick }) => {
                   <LanOption
                     onClick={() => {
                       setSelectOption(item);
-                      setShowOption(!showOption);
+                      dropDown(!showOption);
                     }}
                     key={index}
                   >

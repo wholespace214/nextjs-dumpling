@@ -3,6 +3,8 @@ import Styled from "./styled";
 
 import Image from "next/image";
 
+import SwiperCore, { Navigation } from "swiper";
+SwiperCore.use([Navigation]);
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -50,6 +52,9 @@ import partners5 from "@assets/icons/partners/5.png";
 import OfferCard from "@components/OfferCard";
 
 import map from "@assets/icons/map.png";
+
+import left_black from "@assets/icons/left-black.png";
+import right_red from "@assets/icons/right-red.png";
 
 interface OfferDataType {
   background: string;
@@ -197,10 +202,10 @@ const Software: FC = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={115}
-            pagination={{
-              clickable: true,
+            navigation={{
+              prevEl: ".prev",
+              nextEl: ".next",
             }}
-            modules={[Pagination]}
           >
             {offerData.map((item, index) => (
               <SwiperSlide key={index}>
@@ -212,6 +217,14 @@ const Software: FC = () => {
                 />
               </SwiperSlide>
             ))}
+            <Styled.BenefitsPage>
+              <Styled.BenefitsPageLeft className="prev">
+                <Image src={left_black} />
+              </Styled.BenefitsPageLeft>
+              <Styled.BenefitsPageRight className="next">
+                <Image src={left_black} />
+              </Styled.BenefitsPageRight>
+            </Styled.BenefitsPage>
           </Swiper>
         </Styled.BenefitsSwiper>
         <Styled.BenefitsSwiperMobile>

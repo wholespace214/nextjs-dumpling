@@ -1,5 +1,11 @@
 import React, { FC } from "react";
-import { MenuContainer, MenuBlock, MenuItem, MenuClose } from "./styled";
+import {
+  MenuContainer,
+  MenuBlock,
+  MenuItem,
+  MenuClose,
+  MenuMobileClose,
+} from "./styled";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -66,6 +72,13 @@ const MenuLayout: FC<MenuProps> = ({ handleClick }) => {
           </MenuItem>
         </Link>
       </MenuBlock>
+      <MenuMobileClose
+        onClick={() => {
+          handleClick(false);
+        }}
+      >
+        <Image src={close}></Image>
+      </MenuMobileClose>
     </MenuContainer>
   );
 };

@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
 body {
   padding: 0;
   margin: auto;
-  max-width: 1440px;
   /* background: #E5E5E5; */
 }
 input[type="checkbox"] {
@@ -53,6 +52,8 @@ input[type="checkbox"] {
 .loading {
   animation-name: loading;
   animation-duration: 1s;
+  max-width: 1440px;
+  margin: auto;
 }
 @keyframes loading {
   from {opacity:0}

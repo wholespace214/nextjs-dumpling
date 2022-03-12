@@ -54,7 +54,7 @@ export const BlogItem = styled.div`
 export const BlogContainerRight = styled.div`
   flex: 8;
   @media screen and (max-width: 768px) {
-    margin-top: 90vw;
+    margin-top: 95vw;
   }
 `;
 

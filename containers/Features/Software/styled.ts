@@ -331,6 +331,10 @@ const PartnersText = styled.div`
   color: #272624;
   justify-content: center;
   margin-right: 810px;
+  @media screen and (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const PartnersList = styled.div`

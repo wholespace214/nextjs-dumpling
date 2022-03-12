@@ -195,7 +195,6 @@ export const FilterItemNum = styled.div`
 
 export const ProductContentList = styled.div`
   /* border: 1px solid black; */
-
   flex: 3;
   @media screen and (max-width: 768px) {
     margin-bottom: 80px;
@@ -206,6 +205,7 @@ export const ProductCardGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 26px;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     justify-content: center;
   }

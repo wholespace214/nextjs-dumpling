@@ -85,6 +85,8 @@ import gun6 from "@assets/images/gun_6.png";
 
 import check from "@assets/icons/check.png";
 
+import { useWindowResize } from "beautiful-react-hooks";
+
 interface ProductDataJson {
   img: StaticImageData;
   name: String;
@@ -162,6 +164,12 @@ const Product: FC = () => {
     }
   }, [showModel, mobilFilterShow, showMessage]);
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (window.innerWidth - 377 > e.pageX) {
+      setShowModel(false);
+    }
+  };
+
   return (
     <>
       <ProductContainer show={!mobilFilterShow}>
@@ -194,8 +202,8 @@ const Product: FC = () => {
                 </FilterTitleIcon>
               </FilterTitle>
               <FilterContent show={firearmsShow}>
-                {firearms.map((item) => (
-                  <FilterItem>
+                {firearms.map((item, index) => (
+                  <FilterItem key={index}>
                     <FilterItemCheck>
                       <FilterItmeCheckInput></FilterItmeCheckInput>
                       <FilterItemCheckText>{item.name}</FilterItemCheckText>
@@ -215,8 +223,8 @@ const Product: FC = () => {
                 </FilterTitleIcon>
               </FilterTitle>
               <FilterContent show={redDotsShow}>
-                {redDots.map((item) => (
-                  <FilterItem>
+                {redDots.map((item, index) => (
+                  <FilterItem key={index}>
                     <FilterItemCheck>
                       <FilterItmeCheckInput></FilterItmeCheckInput>
                       <FilterItemCheckText>{item.name}</FilterItemCheckText>
@@ -238,8 +246,8 @@ const Product: FC = () => {
                 </FilterTitleIcon>
               </FilterTitle>
               <FilterContent show={accessoriesShow}>
-                {accessories.map((item) => (
-                  <FilterItem>
+                {accessories.map((item, index) => (
+                  <FilterItem key={index}>
                     <FilterItemCheck>
                       <FilterItmeCheckInput></FilterItmeCheckInput>
                       <FilterItemCheckText>{item.name}</FilterItemCheckText>
@@ -254,8 +262,9 @@ const Product: FC = () => {
           </ProductContentFilter>
           <ProductContentList>
             <ProductCardGroup>
-              {productData.map((item) => (
+              {productData.map((item, index) => (
                 <ProductCard
+                  key={index}
                   img={item.img}
                   price={item.price}
                   name={item.name}
@@ -269,10 +278,11 @@ const Product: FC = () => {
                   <Image src={down}></Image>
                 </PageItemIcon>
               </PageItem>
-              {pageNum.map((item) => {
+              {pageNum.map((item, index) => {
                 if (item === activePageNum) {
                   return (
                     <PageItem
+                      key={index}
                       onClick={() => setActivePageNum(item)}
                       active={true}
                     >
@@ -281,7 +291,10 @@ const Product: FC = () => {
                   );
                 } else {
                   return (
-                    <PageItem onClick={() => setActivePageNum(item)}>
+                    <PageItem
+                      key={index}
+                      onClick={() => setActivePageNum(item)}
+                    >
                       {item}
                     </PageItem>
                   );
@@ -297,7 +310,7 @@ const Product: FC = () => {
         </ProductContent>
       </ProductContainer>
 
-      <ProductModel show={showModel}>
+      <ProductModel onClick={handleClick} show={showModel}>
         <ModelContent show={!showMessage} showModel={showModel}>
           <CloseButton onClick={() => setShowModel(false)}>
             <Image src={close}></Image>
@@ -393,8 +406,8 @@ const Product: FC = () => {
               </FilterTitleIcon>
             </FilterTitle>
             <FilterContent show={firearmsShow}>
-              {firearms.map((item) => (
-                <FilterItem>
+              {firearms.map((item, index) => (
+                <FilterItem key={index}>
                   <FilterItemCheck>
                     <FilterItmeCheckInput></FilterItmeCheckInput>
                     <FilterItemCheckText>{item.name}</FilterItemCheckText>
@@ -414,8 +427,8 @@ const Product: FC = () => {
               </FilterTitleIcon>
             </FilterTitle>
             <FilterContent show={redDotsShow}>
-              {redDots.map((item) => (
-                <FilterItem>
+              {redDots.map((item, index) => (
+                <FilterItem key={index}>
                   <FilterItemCheck>
                     <FilterItmeCheckInput></FilterItmeCheckInput>
                     <FilterItemCheckText>{item.name}</FilterItemCheckText>
@@ -437,8 +450,8 @@ const Product: FC = () => {
               </FilterTitleIcon>
             </FilterTitle>
             <FilterContent show={accessoriesShow}>
-              {accessories.map((item) => (
-                <FilterItem>
+              {accessories.map((item, index) => (
+                <FilterItem key={index}>
                   <FilterItemCheck>
                     <FilterItmeCheckInput></FilterItmeCheckInput>
                     <FilterItemCheckText>{item.name}</FilterItemCheckText>

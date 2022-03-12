@@ -21,10 +21,13 @@ const HeaderText = styled.div`
   margin-top: 160px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    margin-top: 90px;
+  }
 `;
 
 const HeaderTitle = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
@@ -288,6 +291,26 @@ const BenefitsSwiperMobile = styled.div`
     display: block;
   }
 `;
+const BenefitsPage = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 34px;
+  margin-top: 60px;
+`;
+
+const BenefitsPageLeft = styled.div`
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+`;
+
+const BenefitsPageRight = styled.div`
+  transform: rotate(180deg);
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+`;
 
 //! Manufacturing
 
@@ -437,9 +460,14 @@ const WorkTimeLine = styled.div`
   position: absolute;
   top: 200px;
   left: 372px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 375px) {
     top: 300px;
     left: 38px;
+  }
+  @media screen and (max-width: 428px) and (min-width: 400px) {
+    top: 70vw;
+    left: 9.5vw;
+    height: 105vw;
   }
 `;
 
@@ -550,6 +578,9 @@ export default {
   BenefitsText,
   BenefitsSwiper,
   BenefitsSwiperMobile,
+  BenefitsPageLeft,
+  BenefitsPageRight,
+  BenefitsPage,
 
   //! Manufacturing
   Manufacturing,

@@ -23,7 +23,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Text = styled.div`
-  font-family: Heavitas;
+  font-family: "Heavitas [RUS by Daymarius]";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

@@ -20,6 +20,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const isTabletMode = useMediaQuery("(max-width: 768px)");
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showOption, setShowOption] = useState<boolean>(false);
 
   const handleMenu = (flag: boolean) => {
     if (!flag) {
@@ -33,31 +34,47 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     setProgress(100);
   }, []);
 
+  const dropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (showOption) {
+      setShowOption(false);
+    }
+  };
+
   return (
-    <div className="loading">
-      <LoadingBar
-        color="#f11946"
-        height={3}
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
+    <>
       {showMenu ? (
         <Menu handleClick={handleMenu} />
       ) : (
-        <>
-          {isTabletMode ? (
-            <Header handleClick={handleMenu} />
-          ) : pathname === "/contact" ? (
-            <Header2 handleClick={handleMenu} />
-          ) : (
-            <Header handleClick={handleMenu} />
-          )}
-          {children}
-          {pathname === "/contact" ? "" : <News />}
-          <Footer />
-        </>
+        <div onClick={dropClick} className="loading">
+          <LoadingBar
+            color="#f11946"
+            height={3}
+            progress={progress}
+            onLoaderFinished={() => setProgress(0)}
+          />
+          <>
+            {isTabletMode ? (
+              <Header
+                handleClick={handleMenu}
+                showOption={showOption}
+                dropDown={setShowOption}
+              />
+            ) : pathname === "/contact" ? (
+              <Header2 handleClick={handleMenu} />
+            ) : (
+              <Header
+                handleClick={handleMenu}
+                showOption={showOption}
+                dropDown={setShowOption}
+              />
+            )}
+            {children}
+            {pathname === "/contact" ? "" : <News />}
+            <Footer />
+          </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
